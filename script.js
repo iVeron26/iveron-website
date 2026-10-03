@@ -1,0 +1,1 @@
+const button=document.querySelector('.menu');const nav=document.querySelector('.topbar nav');button.addEventListener('click',()=>{nav.classList.toggle('mobile-open');nav.style.display=nav.classList.contains('mobile-open')?'flex':''});document.querySelectorAll('.topbar nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('mobile-open');nav.style.display=''}));
