@@ -74,3 +74,7 @@
 @media(max-width:600px){
  .benefits h4{font-size:34px!important}
 }
+
+/* V10 — LinkedIn in main contact section */
+.contact-linkedin{font-size:17px;font-weight:700;color:var(--green);text-decoration:none}
+.contact-linkedin:hover{text-decoration:underline}
