@@ -1,3 +1,3 @@
-# iVeron Website V5
+# iVeron Website V6
 
-Uses the supplied native iVeron logo and founder photo. Adds phone contact +49 160 99 66 1392.
+V6 refines the Our Approach benefit panel with stronger typography while preserving the existing iVeron design and colors.
