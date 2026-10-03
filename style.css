@@ -106,3 +106,74 @@
 .thumb.execution{background-image:url("assets/phase-execution-v13.png")!important;background-position:center!important}
 .thumb.turnover{background-image:url("assets/phase-turnover-v13.png")!important;background-position:center!important}
 .thumb.aftersales{background-image:url("assets/phase-aftersales-v13.png")!important;background-position:center!important}
+
+/* V14 — phase strip matched to approved mockup */
+.phases{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:30px!important;
+  padding:44px 2.6vw 48px!important;
+  background:#fff!important;
+  align-items:start!important;
+}
+.phases article{
+  display:grid!important;
+  grid-template-columns:1fr 28px!important;
+  grid-template-rows:auto auto auto!important;
+  column-gap:8px!important;
+  min-width:0!important;
+}
+.phase-head{
+  grid-column:1 / -1!important;
+  display:flex!important;
+  align-items:baseline!important;
+  gap:12px!important;
+  margin:0 0 12px!important;
+}
+.phase-head span{
+  font-size:31px!important;
+  line-height:1!important;
+  font-weight:800!important;
+  color:var(--green)!important;
+}
+.phase-head h3{
+  margin:0!important;
+  font-size:19px!important;
+  line-height:1.1!important;
+  font-weight:700!important;
+  color:#102f2d!important;
+}
+.phases .thumb{
+  grid-column:1 / -1!important;
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:1.62 / 1!important;
+  margin:0 0 12px!important;
+  background-size:cover!important;
+  border-radius:0!important;
+}
+.phases article>p{
+  grid-column:1!important;
+  margin:0!important;
+  font-size:14px!important;
+  line-height:1.42!important;
+  color:#263c3a!important;
+  min-height:42px!important;
+}
+.phases article>a{
+  grid-column:2!important;
+  align-self:end!important;
+  justify-self:end!important;
+  text-decoration:none!important;
+  color:var(--green)!important;
+  font-size:24px!important;
+  line-height:1!important;
+  padding-bottom:2px!important;
+}
+@media(max-width:1100px){
+ .phases{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:34px 26px!important}
+}
+@media(max-width:650px){
+ .phases{grid-template-columns:1fr!important;padding:36px 24px!important}
+ .phases .thumb{aspect-ratio:1.75 / 1!important}
+}
