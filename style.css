@@ -99,3 +99,10 @@
 .contact-card span{font-size:12px;line-height:1.2;text-transform:uppercase;letter-spacing:1.5px;color:#75817e;margin-bottom:7px}
 .contact-card strong{font-size:16px;line-height:1.25;color:var(--green);font-weight:600}
 @media(max-width:760px){.contact-cards{grid-template-columns:1fr;max-width:440px}.contact-card{min-height:78px}}
+
+/* V13 — unique phase imagery */
+.thumb.concept{background-image:url("assets/phase-concept-v13.png")!important;background-position:center!important}
+.thumb.definition{background-image:url("assets/phase-definition-v13.png")!important;background-position:center!important}
+.thumb.execution{background-image:url("assets/phase-execution-v13.png")!important;background-position:center!important}
+.thumb.turnover{background-image:url("assets/phase-turnover-v13.png")!important;background-position:center!important}
+.thumb.aftersales{background-image:url("assets/phase-aftersales-v13.png")!important;background-position:center!important}
