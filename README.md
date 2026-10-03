@@ -1,10 +1,3 @@
-# iVeron Website V15
+# iVeron Website V6
 
-GitHub Pages build for www.iveron.de.
-
-V15 includes:
-- bilingual EN/DE website
-- current iVeron hero and branding
-- five independently referenced phase images
-- contact details and LinkedIn
-- restored CNAME for www.iveron.de
+V6 refines the Our Approach benefit panel with stronger typography while preserving the existing iVeron design and colors.
