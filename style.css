@@ -78,3 +78,10 @@
 /* V10 — LinkedIn in main contact section */
 .contact-linkedin{font-size:17px;font-weight:700;color:var(--green);text-decoration:none}
 .contact-linkedin:hover{text-decoration:underline}
+
+/* V11 — bilingual language switch */
+.lang-switch{display:flex;align-items:center;gap:3px;border:1px solid var(--line);border-radius:999px;padding:3px;margin-left:auto}
+.lang-switch button{border:0;background:transparent;color:#53615e;font:inherit;font-size:12px;font-weight:700;padding:7px 9px;border-radius:999px;cursor:pointer}
+.lang-switch button.active{background:var(--green);color:#fff}
+@media(max-width:1000px){.lang-switch{margin-left:auto}.topbar{gap:10px}}
+@media(max-width:600px){.lang-switch button{padding:6px 8px;font-size:11px}}
