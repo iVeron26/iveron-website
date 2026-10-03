@@ -57,3 +57,20 @@
  .benefits{padding:42px 24px!important;gap:38px!important}
  .benefits h4{font-size:38px!important}
 }
+
+/* V8 — refined benefits typography */
+.benefits h4{
+  font-size:clamp(31px,2.25vw,45px)!important;
+  font-weight:400!important;
+  line-height:.96!important;
+  letter-spacing:-1.2px!important;
+}
+.benefits h4 span,.benefits h4 strong{
+  font-weight:400!important;
+}
+@media(max-width:1100px){
+ .benefits h4{font-size:clamp(28px,3vw,39px)!important}
+}
+@media(max-width:600px){
+ .benefits h4{font-size:34px!important}
+}
