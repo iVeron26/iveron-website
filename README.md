@@ -1,11 +1,3 @@
-# iVeron Website V4
+# iVeron Website V5
 
-Refined static website for iVeron GbR.
-
-Changes in V4:
-- official iVeron logo asset
-- simplified 5-phase headings with larger 01–05 numbering
-- simplified approach cards without icons
-- corrected iVeron capitalization
-- Hamburg · Heidelberg · Germany contact line
-- updated founders image
+Uses the supplied native iVeron logo and founder photo. Adds phone contact +49 160 99 66 1392.

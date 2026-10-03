@@ -14,3 +14,12 @@
 .footer-brand{width:95px;height:44px;object-fit:cover;object-position:center 42%;filter:brightness(0) invert(1);opacity:.95}
 .about img{object-fit:cover!important;object-position:center center!important}
 @media(max-width:760px){.brand-logo{width:150px;height:58px}.phase-head span{font-size:24px!important}.benefits h4{font-size:18px!important}}
+
+/* V5 — native iVeron assets */
+.brand-logo{width:210px;flex-basis:210px;height:78px;overflow:visible}
+.brand-logo img{object-fit:contain;object-position:left center}
+.about img{width:100%;height:auto;max-height:none;object-fit:contain!important;object-position:center!important;image-rendering:auto}
+.footer-brand{width:150px;height:54px;object-fit:contain;object-position:left center;filter:none;opacity:1;background:#fff;border-radius:2px;padding:3px 6px}
+.contact-actions{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.contact-phone{font-size:17px;font-weight:700;color:var(--green);text-decoration:none}
+@media(max-width:760px){.brand-logo{width:165px;height:62px}.footer-brand{width:130px}.contact-actions{gap:14px}}
