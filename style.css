@@ -85,3 +85,17 @@
 .lang-switch button.active{background:var(--green);color:#fff}
 @media(max-width:1000px){.lang-switch{margin-left:auto}.topbar{gap:10px}}
 @media(max-width:600px){.lang-switch button{padding:6px 8px;font-size:11px}}
+
+/* V12 — new hero, individual phase visuals, unified contact cards */
+.hero-photo{background-image:url("assets/hero-construction-v12.png")!important;background-position:center center!important}
+.thumb.concept{background-image:url("assets/phase-concept.png")!important}
+.thumb.definition{background-image:url("assets/phase-definition.png")!important}
+.thumb.execution{background-image:url("assets/phase-execution.png")!important}
+.thumb.turnover{background-image:url("assets/phase-turnover.png")!important}
+.thumb.aftersales{background-image:url("assets/phase-aftersales.png")!important}
+.contact-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px!important;max-width:900px;margin:28px auto 22px}
+.contact-card{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:94px;padding:18px 22px;border:1px solid rgba(0,107,60,.22);border-radius:14px;background:#fff;text-decoration:none;transition:.2s ease;box-shadow:0 8px 24px rgba(0,0,0,.04)}
+.contact-card:hover{transform:translateY(-2px);border-color:var(--green);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.contact-card span{font-size:12px;line-height:1.2;text-transform:uppercase;letter-spacing:1.5px;color:#75817e;margin-bottom:7px}
+.contact-card strong{font-size:16px;line-height:1.25;color:var(--green);font-weight:600}
+@media(max-width:760px){.contact-cards{grid-template-columns:1fr;max-width:440px}.contact-card{min-height:78px}}
