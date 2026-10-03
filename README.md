@@ -1,5 +1,11 @@
-# iVeron Website V3
-Static website for iVeron GbR.
+# iVeron Website V4
 
-## GitHub Pages
-Upload the contents of this folder to the root of the `iveron-website` repository. `index.html` must be in the repository root.
+Refined static website for iVeron GbR.
+
+Changes in V4:
+- official iVeron logo asset
+- simplified 5-phase headings with larger 01–05 numbering
+- simplified approach cards without icons
+- corrected iVeron capitalization
+- Hamburg · Heidelberg · Germany contact line
+- updated founders image
