@@ -125,3 +125,7 @@
 @keyframes phaseOpen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:1000px){.phase-details{padding:0 5.4vw 30px}}
 @media(max-width:600px){.phase-model>.phases{padding-bottom:20px}.phase-toggle{grid-column:3;grid-row:1/3;position:static;align-self:center}.phases article.active:after{bottom:-13px}.phase-details{padding:0 22px 26px}.phase-detail{padding:22px 20px}.phase-detail h4{font-size:16px}.phase-detail li{font-size:14px}}
+
+/* V24 – Services structure */
+.services-intro{max-width:1400px;margin:0 auto 28px;padding:0 4vw}.services-intro .eyebrow{margin-bottom:10px}.services-intro h2{margin:0;color:#0c3432;font-size:clamp(30px,3vw,48px);line-height:1.08;letter-spacing:-.02em}.phase-model{padding-top:54px}.assessment{margin-top:0}
+@media(max-width:800px){.services-intro{padding:0 24px;margin-bottom:22px}.phase-model{padding-top:38px}}
