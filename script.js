@@ -21,3 +21,24 @@ const button=document.querySelector('.menu');const nav=document.querySelector('.
  try{initial=localStorage.getItem('iveron-language')||'en'}catch(e){}
  setLang(initial);
 })();
+
+// V23 interactive phase dropdowns — one phase open at a time.
+(function(){
+ const articles=[...document.querySelectorAll('.phases article[data-phase]')];
+ const details=[...document.querySelectorAll('.phase-detail[data-detail]')];
+ function closeAll(){
+   articles.forEach(a=>{a.classList.remove('active');const b=a.querySelector('.phase-toggle');if(b)b.setAttribute('aria-expanded','false')});
+   details.forEach(d=>d.classList.remove('active'));
+ }
+ articles.forEach(article=>{
+   const button=article.querySelector('.phase-toggle');
+   if(!button)return;
+   button.addEventListener('click',()=>{
+     const key=article.dataset.phase;
+     const detail=details.find(d=>d.dataset.detail===key);
+     const wasOpen=article.classList.contains('active');
+     closeAll();
+     if(!wasOpen && detail){article.classList.add('active');button.setAttribute('aria-expanded','true');detail.classList.add('active')}
+   });
+ });
+})();
