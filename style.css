@@ -184,3 +184,69 @@
  .phases article>.phase-detail{display:none!important}
  .phases article>.phase-detail.active{display:block!important}
 }
+
+/* V27 — typography and alternating green / light / green rhythm */
+.phase-detail h4{
+  font-size:clamp(21px,1.65vw,27px)!important;
+  line-height:1.28!important;
+  letter-spacing:-.45px;
+  margin:0 0 24px!important;
+  font-weight:400!important;
+}
+.phase-detail h4 strong{
+  font-size:clamp(23px,1.85vw,30px)!important;
+  font-weight:700!important;
+  letter-spacing:-.65px;
+}
+.phase-detail h5{font-size:17px!important;font-weight:700!important;margin-bottom:10px!important}
+
+/* Quick Assessment returns to the full-width iVeron green treatment. */
+.assessment{
+  margin:0!important;
+  padding:68px 6vw!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  background:linear-gradient(135deg,#006b3c,#005832)!important;
+  color:#fff!important;
+}
+.assessment .eyebrow.light{color:#c7e4d6!important}
+.assessment h2,.assessment p,.assessment b,.assessment span{color:#fff!important}
+.assessment-facts p{border-color:rgba(255,255,255,.28)!important}
+.assessment .pill.white{background:#fff!important;color:var(--green)!important;border-color:#fff!important}
+
+/* Our Promise becomes a calm visual bridge between the two green chapters. */
+.approach{
+  display:block!important;
+  min-height:0!important;
+  padding:74px 6vw 82px!important;
+  background:
+    radial-gradient(circle at 88% 18%,rgba(0,107,60,.08) 0 2px,transparent 3px),
+    linear-gradient(120deg,#f7faf8 0%,#ffffff 52%,#edf5f0 100%)!important;
+  border-top:0!important;
+  position:relative;
+  overflow:hidden;
+}
+.approach:before{
+  content:"";position:absolute;width:310px;height:310px;border:1px solid rgba(0,107,60,.10);border-radius:50%;right:-105px;top:-155px;
+}
+.approach:after{
+  content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(0,107,60,.08);border-radius:50%;right:48px;top:-88px;
+}
+.approach-copy{
+  position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0!important;background:transparent!important;text-align:center;
+}
+.approach-copy .eyebrow{color:var(--green)!important}
+.approach-copy h2{font-size:clamp(40px,4vw,62px)!important}
+.approach-copy>p:not(.eyebrow){max-width:790px!important;margin:0 auto 30px!important;font-size:17px;line-height:1.65!important}
+.benefits{margin:0!important;background:linear-gradient(135deg,#006b3c,#00482f)!important}
+
+@media(max-width:600px){
+  .phase-detail h4{font-size:20px!important;line-height:1.3!important}
+  .phase-detail h4 strong{font-size:22px!important}
+  .phase-detail h5{font-size:16px!important}
+  .assessment{padding:54px 22px!important}
+  .approach{padding:58px 24px 64px!important}
+  .approach-copy{text-align:left}
+  .approach-copy>p:not(.eyebrow){font-size:15px}
+}
