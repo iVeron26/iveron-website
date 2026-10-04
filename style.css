@@ -174,3 +174,58 @@
   .phase-detail.mobile-inline li{font-size:14px!important}
   .phases article.active:after{display:none!important}
 }
+
+/* Dropdown update — desktop goal banner + compact mobile typography */
+@media(min-width:601px){
+  .phase-detail{padding:0 34px 28px!important;overflow:hidden}
+  .phase-detail h4{
+    margin:0 -34px 24px!important;
+    padding:22px 28px 23px!important;
+    background:linear-gradient(135deg,#006b3c,#005a36)!important;
+    color:#fff!important;
+    font-size:20px!important;
+    line-height:1.35!important;
+    letter-spacing:-.25px!important;
+    font-weight:400!important;
+  }
+  .phase-detail h4 strong{
+    display:inline!important;
+    margin:0 7px 0 0!important;
+    font-size:26px!important;
+    line-height:1!important;
+    letter-spacing:-.8px!important;
+    text-transform:none!important;
+    font-weight:400!important;
+    color:#fff!important;
+  }
+  .phase-detail h4 span{font-size:20px!important;color:#fff!important;font-weight:400!important}
+}
+@media(max-width:600px){
+  .phase-detail.mobile-inline h4{
+    font-size:16px!important;
+    line-height:1.5!important;
+    letter-spacing:0!important;
+    font-weight:400!important;
+    margin:0 0 22px!important;
+    color:#172d29!important;
+  }
+  .phase-detail.mobile-inline h4 strong{
+    display:inline!important;
+    margin:0!important;
+    font-size:16px!important;
+    line-height:inherit!important;
+    letter-spacing:0!important;
+    text-transform:none!important;
+    font-weight:700!important;
+    color:#172d29!important;
+  }
+  .phase-detail.mobile-inline h5{
+    font-size:16px!important;
+    line-height:1.2!important;
+    letter-spacing:0!important;
+    text-transform:none!important;
+    font-weight:700!important;
+    color:#172d29!important;
+    margin:0 0 8px!important;
+  }
+}
