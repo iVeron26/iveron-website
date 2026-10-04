@@ -164,3 +164,23 @@
   .phases article.active:after{display:none}
   .phase-details.mobile-empty{display:none}
 }
+
+
+/* V26 — stronger separation of Quick Assessment from the green benefits field */
+.assessment{
+  background:#f5f8f6!important;
+  color:var(--deep)!important;
+  border:1px solid #d7e3dd!important;
+  border-left:6px solid var(--green)!important;
+  box-shadow:none!important;
+}
+.assessment .eyebrow.light{color:var(--green)!important;opacity:1!important}
+.assessment h2,.assessment p,.assessment b,.assessment span{color:var(--deep)!important}
+.assessment-facts p{border-color:#c9d8d1!important}
+.assessment .pill.white{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
+.approach{margin-top:0!important}
+@media(max-width:600px){
+ .assessment{border-left:4px solid var(--green)!important}
+ .phases article>.phase-detail{display:none!important}
+ .phases article>.phase-detail.active{display:block!important}
+}
