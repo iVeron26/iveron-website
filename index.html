@@ -100,14 +100,16 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
   const f=new FormData(this);
   const subject='iVeron Requirements Navigator – 30-day trial request';
   const body=[
-    'New iVeron Requirements Navigator trial request','',
-    'First name: '+f.get('firstName'),
-    'Last name: '+f.get('lastName'),
-    'Company: '+f.get('company'),
-    'Business email: '+f.get('email'),
-    'Phone: '+(f.get('phone')||'-'),'',
-    'Request: 30-day free trial access'
-  ].join('\\n');
+    'iVeron Requirements Navigator – Trial Request',
+    '',
+    'Name: ' + f.get('firstName'),
+    'Last name: ' + f.get('lastName'),
+    'Email: ' + f.get('email'),
+    'Company: ' + f.get('company'),
+    'Phone: ' + (f.get('phone') || '-'),
+    '',
+    'Request: 30-day free trial'
+  ].join('\n');
   window.location.href='mailto:info@iveron.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });
 </script>
