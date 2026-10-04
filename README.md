@@ -1,3 +1,3 @@
-# iVeron Website V6
+# iVeron Website – Final + LinkedIn Follow
 
-V6 refines the Our Approach benefit panel with stronger typography while preserving the existing iVeron design and colors.
+Final website baseline with LinkedIn contact card linked to the official iVeron GbR company page.
