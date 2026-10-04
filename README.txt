@@ -1,9 +1,15 @@
-iVeron Requirements Navigator – GitHub Pages package
+iVeron Requirements Navigator – private-route package
 
-Upload the folder "navigator" into the ROOT of the existing iVeron website repository.
-Do NOT replace the website's root index.html.
+Replace the EXISTING "navigator" folder in the GitHub repository with the "navigator" folder from this package.
 
-Result after GitHub Pages deploy:
+Public / obvious route:
 https://www.iveron.de/navigator/
+→ does NOT open the Navigator.
 
-The QR code should only be generated after this URL is live.
+Navigator route for the QR code:
+https://www.iveron.de/navigator/r7k4m9x2/
+
+Important:
+This is obscurity, not authentication. Anyone who receives or discovers the full URL can access it.
+Do not link the private route from the public website.
+A QR code has intentionally NOT been included yet.
