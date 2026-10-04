@@ -229,3 +229,19 @@
     margin:0 0 8px!important;
   }
 }
+
+
+/* Mobile dropdown V3 — one uniform compact font size */
+@media(max-width:600px){
+  .phase-detail.mobile-inline,
+  .phase-detail.mobile-inline h4,
+  .phase-detail.mobile-inline h4 strong,
+  .phase-detail.mobile-inline h4 span,
+  .phase-detail.mobile-inline h5,
+  .phase-detail.mobile-inline ul,
+  .phase-detail.mobile-inline li{font-size:14px!important;}
+  .phase-detail.mobile-inline h4{line-height:1.45!important;margin:0 0 16px!important;}
+  .phase-detail.mobile-inline h4 strong{line-height:1.45!important;}
+  .phase-detail.mobile-inline h5{line-height:1.45!important;margin:0 0 6px!important;}
+  .phase-detail.mobile-inline li{line-height:1.45!important;}
+}
