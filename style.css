@@ -130,3 +130,37 @@
 .phase-intro{max-width:1440px;margin:0 auto 28px;padding:0 4.5%;}
 .phase-intro .eyebrow{margin-bottom:12px;}
 .phase-intro h2{margin:0;color:#123b36;font-size:clamp(30px,3vw,48px);line-height:1.08;letter-spacing:-.02em;}
+
+/* V25 — cleaner service flow and mobile inline phase details */
+/* Quick Assessment is now an inset service card instead of a full-width green band. */
+.assessment{
+  margin:34px 5.4vw 74px;
+  padding:52px 4vw;
+  border-radius:18px;
+  box-shadow:0 18px 48px rgba(16,37,31,.10);
+}
+/* Create a clear visual break before the promise/benefits block. */
+.approach{border-top:1px solid var(--line)}
+
+@media(max-width:1000px){
+  .assessment{margin:28px 5.4vw 56px;padding:42px 5vw}
+}
+
+@media(max-width:600px){
+  .assessment{margin:22px 18px 46px;padding:34px 24px;border-radius:14px}
+  .phase-model>.phases{padding-bottom:12px}
+  .phases article{overflow:visible}
+  .phases article>.phase-detail{
+    grid-column:1/-1;
+    grid-row:3;
+    width:100%;
+    margin:14px 0 4px;
+    padding:18px 16px;
+    border:1px solid #d8e2de;
+    border-top:3px solid var(--green);
+    border-radius:0 0 10px 10px;
+    background:#f8fbf9;
+  }
+  .phases article.active:after{display:none}
+  .phase-details.mobile-empty{display:none}
+}
