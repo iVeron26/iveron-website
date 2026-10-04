@@ -1,3 +1,3 @@
-# iVeron Website V29
+# iVeron Website V6
 
-V29 keeps the current services, dropdowns, mobile behavior and green Quick Assessment. The Our Promise section is redesigned as a full-width light chapter with four restrained benefit columns; Why iVeron is now the following full-width green chapter.
+V6 refines the Our Approach benefit panel with stronger typography while preserving the existing iVeron design and colors.
