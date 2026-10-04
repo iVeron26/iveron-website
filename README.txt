@@ -1,10 +1,9 @@
-V6 PC FIX
-Replace the existing navigator folder in GitHub with the navigator folder in this package.
+iVeron Requirements Navigator V7
 
-Mobile:
-https://www.iveron.de/navigator/r7k4m9x2/
+Replace the existing navigator folder in GitHub with this navigator folder.
 
-PC:
-https://www.iveron.de/navigator/r7k4m9x2/pc/
+Mobile: https://www.iveron.de/navigator/r7k4m9x2/
+PC: https://www.iveron.de/navigator/r7k4m9x2/pc/
 
-Fix: removed the inherited 430px smartphone body limit on desktop and expanded the desktop layout.
+V7: redesigned desktop layout, original iVeron logo, repaired DE/EN switching, compact scanner/results.
+Security: client-side login remains a lightweight access barrier, not server-side authentication.
