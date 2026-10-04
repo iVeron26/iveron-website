@@ -1,5 +1,3 @@
-iVeron Website V25
-- Quick Assessment as inset green service card with whitespace around it
-- Clear visual separation from the green benefits panel
-- Mobile phase dropdown details open directly below the selected phase
-- Based on V24 rebuilt; all existing content/assets retained
+# iVeron Website V29
+
+V29 keeps the current services, dropdowns, mobile behavior and green Quick Assessment. The Our Promise section is redesigned as a full-width light chapter with four restrained benefit columns; Why iVeron is now the following full-width green chapter.
