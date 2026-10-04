@@ -42,3 +42,25 @@ const button=document.querySelector('.menu');const nav=document.querySelector('.
    });
  });
 })();
+
+// Mobile: move the active phase detail directly below its phase card.
+(function(){
+ const media=window.matchMedia('(max-width:600px)');
+ const phaseDetails=document.querySelector('.phase-details');
+ const details=[...document.querySelectorAll('.phase-detail[data-detail]')];
+ const articles=[...document.querySelectorAll('.phases article[data-phase]')];
+ function placeDetails(){
+   details.forEach(detail=>{
+     if(media.matches && detail.classList.contains('active')){
+       const article=articles.find(a=>a.dataset.phase===detail.dataset.detail);
+       if(article){detail.classList.add('mobile-inline');article.appendChild(detail)}
+     }else{
+       detail.classList.remove('mobile-inline');
+       if(phaseDetails && detail.parentElement!==phaseDetails)phaseDetails.appendChild(detail);
+     }
+   });
+ }
+ document.querySelectorAll('.phase-toggle').forEach(btn=>btn.addEventListener('click',()=>requestAnimationFrame(placeDetails)));
+ if(media.addEventListener)media.addEventListener('change',placeDetails);else media.addListener(placeDetails);
+ placeDetails();
+})();
