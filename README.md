@@ -1,3 +1,3 @@
-# iVeron Website – Final + LinkedIn Follow
+# iVeron Website – Final Contact Update
 
-Final website baseline with LinkedIn contact card linked to the official iVeron GbR company page.
+Adds a desktop QR code and a mobile vCard download button for iVeron contact details. Also keeps the consolidated “Our Services / Unsere Leistungen” navigation and official iVeron LinkedIn company link. Existing assets in the repository remain unchanged.
