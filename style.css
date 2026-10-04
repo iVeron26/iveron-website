@@ -250,3 +250,53 @@
   .approach-copy{text-align:left}
   .approach-copy>p:not(.eyebrow){font-size:15px}
 }
+
+/* V28 — restore the V12 Our Promise / benefits split layout */
+.approach{
+  display:grid!important;
+  grid-template-columns:45% 55%!important;
+  min-height:390px!important;
+  padding:0!important;
+  margin:0!important;
+  background:#fff!important;
+  border:0!important;
+  overflow:visible!important;
+}
+.approach:before,.approach:after{display:none!important;content:none!important}
+.approach-copy{
+  max-width:none!important;
+  margin:0!important;
+  padding:55px 5.4vw!important;
+  background:#fafbfa!important;
+  text-align:left!important;
+}
+.approach-copy .eyebrow{color:#89928f!important}
+.approach-copy h2{font-size:clamp(36px,3.2vw,52px)!important}
+.approach-copy>p:not(.eyebrow){
+  max-width:610px!important;
+  margin:0 0 26px!important;
+  font-size:initial!important;
+  line-height:1.55!important;
+  color:#3f4d49!important;
+}
+.benefits{
+  margin:0!important;
+  background:linear-gradient(135deg,#006b3c,#00482f)!important;
+  color:#fff!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:54px 72px!important;
+  padding:54px 6.2vw!important;
+  align-content:center!important;
+}
+@media(max-width:1000px){
+  .approach{grid-template-columns:1fr!important}
+  .approach-copy{padding:50px 6vw!important}
+  .benefits{min-height:360px!important}
+}
+@media(max-width:600px){
+  .approach{display:block!important}
+  .approach-copy{padding:50px 22px!important}
+  .approach-copy>p:not(.eyebrow){font-size:15px!important}
+  .benefits{grid-template-columns:1fr!important;padding:42px 24px!important;gap:38px!important}
+}
