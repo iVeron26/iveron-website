@@ -1,17 +1,9 @@
-iVeron Requirements Navigator – GitHub Deployment V8.2
+iVeron Requirements Navigator V7
 
-Upload/replace the complete navigator folder in the GitHub repository root.
+Replace the existing navigator folder in GitHub with this navigator folder.
 
-URLs:
 Mobile: https://www.iveron.de/navigator/r7k4m9x2/
-PC:     https://www.iveron.de/navigator/r7k4m9x2/pc/
+PC: https://www.iveron.de/navigator/r7k4m9x2/pc/
 
-V8.2 changes:
-- PC home cards aligned on one baseline
-- Green PC sidebars show headings only, without numbers
-- PC Document Scan uses one UPLOAD DOCUMENT button
-- File inputs made directly clickable on PC and mobile
-- Mobile keeps Take Photo + Select File
-- Stay signed in / Angemeldet bleiben removed on PC and mobile
-- Login is session-only
-- Contact arrows reduced
+V7: redesigned desktop layout, original iVeron logo, repaired DE/EN switching, compact scanner/results.
+Security: client-side login remains a lightweight access barrier, not server-side authentication.
