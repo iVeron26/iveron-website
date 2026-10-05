@@ -1,17 +1,24 @@
-iVeron Requirements Navigator – GitHub Deployment V8.2
+iVeron Requirements Navigator V8.5 – V5 Mobile Scanner Restore
 
-Upload/replace the complete navigator folder in the GitHub repository root.
+Basis: V8.4 current app design and navigation.
+Change: Mobile Document Scan processing has been restored to the proven V5 implementation.
 
-URLs:
-Mobile: https://www.iveron.de/navigator/r7k4m9x2/
-PC:     https://www.iveron.de/navigator/r7k4m9x2/pc/
+Preserved:
+- current V8.4 design
+- login
+- DE/EN interface
+- project phase dropdown
+- PC layout
+- existing private route
 
-V8.2 changes:
-- PC home cards aligned on one baseline
-- Green PC sidebars show headings only, without numbers
-- PC Document Scan uses one UPLOAD DOCUMENT button
-- File inputs made directly clickable on PC and mobile
-- Mobile keeps Take Photo + Select File
-- Stay signed in / Angemeldet bleiben removed on PC and mobile
-- Login is session-only
-- Contact arrows reduced
+Restored from V5 on smartphone/mobile:
+- camera capture input
+- image upload
+- PDF upload
+- PDF.js 4.10.38 module implementation
+- Tesseract.js 5 OCR (German + English)
+- text extraction first, OCR fallback for scanned PDFs
+- V5 standard detection and result context/page output
+
+Deploy: replace the existing navigator folder in GitHub with the navigator folder from this ZIP.
+Private URL remains unchanged.
