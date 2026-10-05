@@ -1,9 +1,16 @@
-iVeron Requirements Navigator V7
+iVeron Requirements Navigator V5 – Document Scan
 
-Replace the existing navigator folder in GitHub with this navigator folder.
+Replace the existing "navigator" folder in the GitHub repository with this package's "navigator" folder.
 
-Mobile: https://www.iveron.de/navigator/r7k4m9x2/
-PC: https://www.iveron.de/navigator/r7k4m9x2/pc/
+Private Navigator URL remains unchanged:
+https://www.iveron.de/navigator/r7k4m9x2/
 
-V7: redesigned desktop layout, original iVeron logo, repaired DE/EN switching, compact scanner/results.
-Security: client-side login remains a lightweight access barrier, not server-side authentication.
+New function:
+Home → DOCUMENT SCAN
+- Smartphone camera / image
+- PDF upload
+- local text extraction / OCR
+- automatic standard-reference detection
+- page/context display and discipline classification
+
+The document itself is not uploaded to iVeron. PDF.js and Tesseract.js are loaded from public CDNs and processing runs in the browser.
