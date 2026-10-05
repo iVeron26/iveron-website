@@ -1,16 +1,13 @@
-iVeron Requirements Navigator V5 – Document Scan
+iVeron Requirements Navigator V8.7 — V5 CORE STABLE
 
-Replace the existing "navigator" folder in the GitHub repository with this package's "navigator" folder.
+Purpose:
+- Mobile secret-path app is the original, byte-for-byte V5 Document Scan build that worked on the smartphone.
+- No scanner code was transplanted or rewritten.
+- Existing outer navigator routing and PC page are retained from V8.4.
 
-Private Navigator URL remains unchanged:
-https://www.iveron.de/navigator/r7k4m9x2/
+Deploy:
+Replace the existing navigator folder in GitHub with this navigator folder.
+Secret mobile path remains: /navigator/r7k4m9x2/
 
-New function:
-Home → DOCUMENT SCAN
-- Smartphone camera / image
-- PDF upload
-- local text extraction / OCR
-- automatic standard-reference detection
-- page/context display and discipline classification
-
-The document itself is not uploaded to iVeron. PDF.js and Tesseract.js are loaded from public CDNs and processing runs in the browser.
+Important:
+This build deliberately prioritizes restoring the known-working V5 scanner core. Once confirmed on the target smartphone, visual V8 refinements can be layered onto this working base without touching scanner JavaScript.
