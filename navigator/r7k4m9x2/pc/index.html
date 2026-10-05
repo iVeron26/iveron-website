@@ -24,7 +24,19 @@
 .scanNote{font-size:2.8vw;line-height:1.45;color:#71807a;margin-top:4vh}
 .clearBtn{border:0;background:none;color:var(--g);font-weight:bold;padding:3vw 0;font-size:3.2vw}
 
-#loginGate{position:fixed;inset:0;z-index:9999;background:#00723f;color:#fff;display:flex;align-items:center;justify-content:center;padding:8vw}#loginGate.hidden{display:none}.loginBox{width:100%;max-width:520px}.loginBrand{font-size:12vw;font-weight:800;letter-spacing:-.06em}.loginClaim{margin:1vh 0 7vh;opacity:.82}.loginTitle{font-size:7vw;line-height:1.05;margin:0 0 2vh}.loginSub{opacity:.84;margin-bottom:4vh}.loginField{display:block;margin:2.5vh 0 1vh;font-size:2.8vw;font-weight:bold}.loginInput{box-sizing:border-box;width:100%;padding:4vw;border:1px solid #ffffff88;background:#ffffff12;color:#fff;font-size:4vw}.loginButton{width:100%;margin-top:3vh;padding:4.5vw;border:0;background:#fff;color:#00723f;font-size:3.4vw;font-weight:800}.loginRemember{display:flex;gap:2vw;align-items:center;margin-top:2.5vh}#utilityBar{position:fixed;right:3vw;top:2vh;z-index:700;display:none;gap:1.5vw}.utilBtn{border:1px solid #00723f;background:#fff;color:#00723f;padding:2.3vw 2.8vw;font-size:2.6vw;font-weight:800}.normTitle{font-size:3.45vw;line-height:1.45;color:#52615b;margin-top:2.5vw}.phaseTag{display:inline-block;margin-top:2.5vw;padding:1.7vw 2.2vw;background:#eef3f1;color:#00723f;font-size:2.7vw;font-weight:bold}</style><style>
+#loginGate{position:fixed;inset:0;z-index:9999;background:#00723f;color:#fff;display:flex;align-items:center;justify-content:center;padding:8vw}#loginGate.hidden{display:none}.loginBox{width:100%;max-width:520px}.loginBrand{font-size:12vw;font-weight:800;letter-spacing:-.06em}.loginClaim{margin:1vh 0 7vh;opacity:.82}.loginTitle{font-size:7vw;line-height:1.05;margin:0 0 2vh}.loginSub{opacity:.84;margin-bottom:4vh}.loginField{display:block;margin:2.5vh 0 1vh;font-size:2.8vw;font-weight:bold}.loginInput{box-sizing:border-box;width:100%;padding:4vw;border:1px solid #ffffff88;background:#ffffff12;color:#fff;font-size:4vw}.loginButton{width:100%;margin-top:3vh;padding:4.5vw;border:0;background:#fff;color:#00723f;font-size:3.4vw;font-weight:800}.loginRemember{display:flex;gap:2vw;align-items:center;margin-top:2.5vh}#utilityBar{position:fixed;right:3vw;top:2vh;z-index:700;display:none;gap:1.5vw}.utilBtn{border:1px solid #00723f;background:#fff;color:#00723f;padding:2.3vw 2.8vw;font-size:2.6vw;font-weight:800}.normTitle{font-size:3.45vw;line-height:1.45;color:#52615b;margin-top:2.5vw}.phaseTag{display:inline-block;margin-top:2.5vw;padding:1.7vw 2.2vw;background:#eef3f1;color:#00723f;font-size:2.7vw;font-weight:bold}
+/* V8.12 – compact PC scan results */
+#scan #scanResults{max-width:900px!important;margin-top:18px!important}
+#scan #scanResults .resultHead{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;padding:14px 0!important;margin:0!important;border-bottom:1px solid #dce5e1!important}
+#scan #scanResults .resultHead b{font-size:24px!important;line-height:1.2!important;letter-spacing:-.02em!important}
+#scan #scanResults .resultHead span{font-size:15px!important;line-height:1.4!important;color:#74817c!important}
+#scan #scanResults .normResult{padding:14px 16px!important;margin:10px 0!important;border:1px solid #dce5e1!important;background:#fff!important}
+#scan #scanResults .normResult h2{font-size:20px!important;line-height:1.25!important;margin:4px 0 6px!important}
+#scan #scanResults .normMeta,#scan #scanResults .normPage{font-size:11px!important;line-height:1.4!important}
+#scan #scanResults .normContext{font-size:13px!important;line-height:1.5!important;margin-top:8px!important;color:#52615b!important}
+#scan #scanResults .emptyResult{max-width:900px!important;padding:16px!important;margin-top:10px!important;background:#f5f7f6!important;font-size:14px!important;line-height:1.5!important;color:#52615b!important}
+
+</style><style>
 @media(min-width:900px){
  html,body{max-width:none!important;width:100%!important;margin:0!important;background:#fff!important;box-shadow:none!important;font-family:Arial,Helvetica,sans-serif;color:#102f28}
  body{overflow-x:hidden} .page{width:100%!important;max-width:none!important;min-height:100vh!important;margin:0!important;padding:72px max(48px,6vw)!important;box-sizing:border-box;background:#fff!important;box-shadow:none!important}
@@ -201,16 +213,27 @@ const statusBox=$("scanStatus"), statusText=$("scanStatusText"), progress=$("sca
 
 function setStatus(t,p=10){statusBox.classList.add("show");statusText.textContent=t;progress.style.width=Math.max(2,Math.min(100,p))+"%";}
 function esc(s){return (s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function normalize(s){return s.replace(/\u2013|\u2014/g,"-").replace(/\s+/g," ").trim();}
+function normalize(s){return (s||"").replace(/\u2013|\u2014|\u2212/g,"-").replace(/\s+/g," ").trim();}
+function normalizeForDetection(s){
+ return normalize(s).toUpperCase()
+  .replace(/[|]/g,"I")
+  .replace(/\b1SO\b/g,"ISO").replace(/\bIS0\b/g,"ISO")
+  .replace(/\bE[NM]\s*ISO\b/g,"EN ISO")
+  .replace(/\bENISO\b/g,"EN ISO").replace(/\bDINEN\b/g,"DIN EN")
+  .replace(/\bDINISO\b/g,"DIN ISO").replace(/\bCENISO\b/g,"CEN ISO")
+  .replace(/\bISO\s*\/\s*TR\b/g,"ISO/TR").replace(/\bISO\s*\/\s*IEC\b/g,"ISO/IEC")
+  .replace(/\s*-\s*/g,"-").replace(/\s*:\s*/g,":").replace(/\s+/g," ");
+}
 
 const patterns=[
- /\b(?:DIN\s+)?EN\s+ISO(?:\/IEC)?\s+\d{3,6}(?:-\d+)*(?::\d{4})?(?:\+\s*A\d(?::\d{4})?)?\b/gi,
- /\bDIN\s+EN\s+\d{3,6}(?:-\d+)*(?::\d{4})?(?:\+\s*A\d(?::\d{4})?)?\b/gi,
- /\bDIN\s+ISO\s+\d{3,6}(?:-\d+)*(?::\d{4})?\b/gi,
- /\bDIN\s+\d{3,6}(?:-\d+)*(?::\d{4})?\b/gi,
- /\bISO(?:\/IEC)?\s+\d{3,6}(?:-\d+)*(?::\d{4})?\b/gi,
- /\bIEC\s+\d{3,6}(?:-\d+)*(?::\d{4})?\b/gi,
- /\bEN\s+\d{3,6}(?:-\d+)*(?::\d{4})?(?:\+\s*A\d(?::\d{4})?)?\b/gi,
+ /\bCEN\s+ISO\/TR\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?\b/gi,
+ /\b(?:DIN\s+)?EN\s+ISO(?:\/IEC)?\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?(?:\+\s*A[0-9IL](?::[0-9IL]{4})?)?\b/gi,
+ /\bDIN\s+EN\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?(?:\+\s*A[0-9IL](?::[0-9IL]{4})?)?\b/gi,
+ /\bDIN\s+ISO\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?\b/gi,
+ /\bDIN\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?\b/gi,
+ /\bISO(?:\/IEC)?\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?\b/gi,
+ /\bIEC\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?\b/gi,
+ /\bEN\s+[0-9IL]{3,6}(?:-[0-9IL]+)*(?::[0-9IL]{4})?(?:\+\s*A[0-9IL](?::[0-9IL]{4})?)?\b/gi,
  /\bASTM\s+[A-Z]\s?\d{1,5}(?:\/[A-Z]\s?\d{1,5})?(?:-\d{2,4})?\b/gi,
  /\bASME\s+(?:BPVC\s+)?[A-Z0-9.-]+(?:\s+Section\s+[IVX]+)?\b/gi,
  /\bAWS\s+[A-Z]\d+(?:\.\d+)*\b/gi,
@@ -231,11 +254,15 @@ function areaFor(ref,ctx){
  if(/1090|1993|eurocode|design|konstruktion/.test(s)) return "Engineering";
  return "Requirements";
 }
-function canonical(ref){return normalize(ref).toUpperCase().replace(/\s*:\s*/g,":").replace(/\s*-\s*/g,"-");}
+function canonical(ref){
+ let s=normalizeForDetection(ref);
+ s=s.replace(/[0-9IL]+/g,t=>/[0-9]/.test(t)?t.replace(/[IL]/g,"1"):t);
+ return s;
+}
 function extractStandards(chunks){
  const found=new Map();
  for(const ch of chunks){
-   const text=normalize(ch.text);
+   const text=normalizeForDetection(ch.text);
    for(const rx of patterns){
      rx.lastIndex=0; let m;
      while((m=rx.exec(text))){
@@ -255,7 +282,7 @@ function extractStandards(chunks){
 function render(found){
  clear.style.display="block";
  if(!found.length){
-   results.innerHTML='<div class="resultHead"><b>0 Treffer</b><span>Keine Normreferenz erkannt</span></div><div class="scanHero"><p>Versuche ein schärferes Foto oder eine PDF mit lesbarem Text. Bei ungewöhnlichen Schreibweisen kann eine Referenz übersehen werden.</p></div>';
+   results.innerHTML='<div class="resultHead"><b>0 Normreferenzen</b><span>erkannt</span></div><div class="emptyResult">Keine Normreferenz erkannt. Bitte möglichst eine scharfe, gerade Aufnahme oder die Original-PDF verwenden.</div>';
    return;
  }
  results.innerHTML='<div class="resultHead"><b>'+found.length+' Treffer</b><span>erkannte Standards</span></div>'+
@@ -263,9 +290,35 @@ function render(found){
  (x.pages.size?'<div class="normPage">Gefunden auf Seite '+[...x.pages].join(", ")+'</div>':'')+
  x.contexts.map(c=>'<div class="normContext">… '+esc(c)+' …</div>').join("")+'</div>').join("");
 }
+async function prepareForOcr(source){
+ let canvas;
+ if(source instanceof HTMLCanvasElement){ canvas=source; }
+ else{
+   const bmp=await createImageBitmap(source);
+   const targetW=Math.max(1800,Math.min(2600,bmp.width*4)), scale=targetW/bmp.width;
+   canvas=document.createElement("canvas");
+   canvas.width=Math.round(bmp.width*scale); canvas.height=Math.round(bmp.height*scale);
+   canvas.getContext("2d").drawImage(bmp,0,0,canvas.width,canvas.height);
+   if(bmp.close)bmp.close();
+ }
+ const ctx=canvas.getContext("2d",{willReadFrequently:true});
+ const img=ctx.getImageData(0,0,canvas.width,canvas.height), d=img.data;
+ for(let i=0;i<d.length;i+=4){
+   const g=0.299*d[i]+0.587*d[i+1]+0.114*d[i+2];
+   const v=g<205?Math.max(0,Math.min(255,(g-128)*1.55+128)):255;
+   d[i]=d[i+1]=d[i+2]=v;
+ }
+ ctx.putImageData(img,0,0);
+ return canvas;
+}
 async function ocrImage(fileOrCanvas,label="Bild"){
+ setStatus(label+" · Bild wird optimiert …",18);
+ const prepared=await prepareForOcr(fileOrCanvas);
  setStatus(label+" · Texterkennung läuft …",25);
- const r=await Tesseract.recognize(fileOrCanvas,"deu+eng",{logger:m=>{if(m.status==="recognizing text")setStatus(label+" · Texterkennung "+Math.round((m.progress||0)*100)+" %",25+(m.progress||0)*65)}});
+ const r=await Tesseract.recognize(prepared,"deu+eng",{
+   logger:m=>{if(m.status==="recognizing text")setStatus(label+" · Texterkennung "+Math.round((m.progress||0)*100)+" %",25+(m.progress||0)*65)},
+   tessedit_pageseg_mode:"6", preserve_interword_spaces:"1"
+ });
  return r.data.text||"";
 }
 async function scanImage(file){
