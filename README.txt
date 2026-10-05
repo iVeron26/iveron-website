@@ -1,17 +1,16 @@
-iVeron Requirements Navigator V8.8 – No Login / Stable Scanner
+iVeron Requirements Navigator V8.9 – PC Login Removed
 
-Basis: V8.7 stable mobile core.
+Fix based on V8.8.
 
 Mobile:
-- exact proven V5 core remains unchanged
+- unchanged stable V5 core
 - no login
-- proven V5 document scanner
+- proven smartphone scanner retained
 
 PC:
-- current PC design remains
-- login gate bypassed / logout hidden
-- existing V5 scanner engine remains untouched
-- DE/EN and navigation remain active
+- login gate physically removed from HTML
+- authentication/password logic removed
+- app opens directly
+- PC design, navigation and DE/EN retained
 
-Deploy: replace the existing navigator folder in GitHub with the navigator folder from this ZIP.
-Private URL remains unchanged.
+Deploy: replace the existing navigator folder in GitHub with the navigator folder from this package.
