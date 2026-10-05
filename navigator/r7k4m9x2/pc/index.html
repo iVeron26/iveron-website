@@ -181,7 +181,7 @@ section[id*='concept']:after{content:'01\\A CONCEPT'!important}section[id*='defi
 <p data-de="Die Analyse läuft auf deinem Gerät. Für OCR und PDF-Verarbeitung werden Browser-Bibliotheken geladen; das ausgewählte Dokument wird von iVeron nicht gespeichert." data-en="The analysis runs on your device. Browser libraries are loaded for OCR and PDF processing; the selected document is not stored by iVeron.">Die Analyse läuft auf deinem Gerät. Für OCR und PDF-Verarbeitung werden Browser-Bibliotheken geladen; das ausgewählte Dokument wird von iVeron nicht gespeichert.</p>
 </div>
 <div class="scanActions pcUploadOnly">
-<label class="scanBtn primary" data-de="DOKUMENT HOCHLADEN →" data-en="UPLOAD DOCUMENT →">DOKUMENT HOCHLADEN →<input accept="image/*,.pdf,application/pdf" id="fileInput" type="file"/></label>
+<label class="scanBtn primary"><span data-de="DOKUMENT HOCHLADEN →" data-en="UPLOAD DOCUMENT →">DOKUMENT HOCHLADEN →</span><input accept="image/*,.pdf,application/pdf" id="fileInput" type="file"/></label>
 <input accept="image/*" capture="environment" id="cameraInput" style="display:none!important" type="file"/>
 </div>
 <div class="scanStatus" id="scanStatus"><b id="scanStatusText">Dokument wird analysiert …</b><div class="scanProgress"><i id="scanProgress"></i></div></div>
@@ -312,9 +312,10 @@ async function handle(file){
    setStatus("Analyse nicht möglich: "+(e.message||e),100);
  }
 }
-$("cameraInput").addEventListener("change",e=>handle(e.target.files[0]));
-$("fileInput").addEventListener("change",e=>handle(e.target.files[0]));
-clear.addEventListener("click",()=>{results.innerHTML="";clear.style.display="none";$("cameraInput").value="";$("fileInput").value="";});
+const cameraInput=$("cameraInput"), fileInput=$("fileInput");
+if(cameraInput) cameraInput.addEventListener("change",e=>handle(e.target.files[0]));
+if(fileInput) fileInput.addEventListener("change",e=>handle(e.target.files[0]));
+if(clear) clear.addEventListener("click",()=>{results.innerHTML="";clear.style.display="none";if(cameraInput)cameraInput.value="";if(fileInput)fileInput.value="";});
 </script>
 <script>
 (function(){
