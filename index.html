@@ -77,8 +77,8 @@
   <div class="navigator-modal-card">
     <a href="#" class="navigator-modal-close" aria-label="Close">×</a>
     <div class="navigator-modal-kicker">iVERON REQUIREMENTS NAVIGATOR</div>
-    <h2>30-day free trial</h2>
-    <p>Request your free access. After submitting, your email application opens with the request and your contact details pre-filled.</p>
+    <h2>Coming soon</h2>
+    <p>Leave your contact details and we will let you know when the iVeron Requirements Navigator becomes available.</p>
     <form id="navigatorTrialForm">
       <div class="navigator-form-grid">
         <label>First name<input required name="firstName" autocomplete="given-name"></label>
@@ -87,9 +87,9 @@
         <label>Business email<input required type="email" name="email" autocomplete="email"></label>
         <label class="wide">Phone <span>(optional)</span><input name="phone" autocomplete="tel"></label>
       </div>
-      <label class="navigator-consent"><input required type="checkbox" name="consent"> I agree that iVeron may use my details to process this trial request.</label>
-      <button type="submit" class="navigator-submit">REQUEST FREE ACCESS →</button>
-      <div class="navigator-form-note">Free for 30 days · No credit card required</div>
+      <label class="navigator-consent"><input required type="checkbox" name="consent"> I agree that iVeron may use my details to process this request.</label>
+      <button type="submit" class="navigator-submit">KEEP ME UPDATED →</button>
+      <div class="navigator-form-note">Coming soon</div>
     </form>
   </div>
 </div>
@@ -98,7 +98,7 @@
 document.getElementById('navigatorTrialForm')?.addEventListener('submit',function(e){
   e.preventDefault();
   const f=new FormData(this);
-  const subject='iVeron Requirements Navigator – 30-day trial request';
+  const subject='iVeron Requirements Navigator – Coming soon request';
   const body=[
     'iVeron Requirements Navigator – Trial Request',
     '',
@@ -108,7 +108,7 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
     'Company: ' + f.get('company'),
     'Phone: ' + (f.get('phone') || '-'),
     '',
-    'Request: 30-day free trial'
+    'Request: Coming soon request'
   ].join('\n');
   window.location.href='mailto:info@iveron.de?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });
