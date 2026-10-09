@@ -41,7 +41,7 @@
 <main id="top">
 <section class="hero"><div class="hero-copy"><p class="eyebrow" data-de="INDUSTRIEERFAHRUNG. PRAGMATISCHE LÖSUNGEN." data-en="INDUSTRIAL EXPERTISE. PRACTICAL SOLUTIONS.">INDUSTRIAL EXPERTISE. PRACTICAL SOLUTIONS.</p><h1 data-de-html="from Tender&lt;br/&gt;to turnover" data-en-html="from Tender&lt;br/&gt;to turnover">from Tender<br/>to turnover</h1><p class="lead" data-de="Wir verstehen die Anforderungen globaler Industrieunternehmen und machen sie für mittelständische Unternehmen beherrschbar." data-en="We understand the requirements of global industry leaders and make them manageable for SME suppliers.">We understand the requirements of global industry leaders and make them manageable for SME suppliers.</p><div class="iveron-hero-actions">
 <a class="pill outline iveron-hero-action" href="#assessment">Quick Assessment</a>
-<a class="pill iveron-hero-action iveron-brochure-download" href="Iveron_Brochure_2026.pdf" download="Iveron_Brochure_2026.pdf" data-de="Broschüre" data-en="Brochure">Brochure</a>
+<a class="pill iveron-hero-action iveron-brochure-download" id="iveronBrochureDownload" href="Iveron_Brochure_2026_EN.pdf" download="Iveron_Brochure_2026_EN.pdf" data-de="Broschüre" data-en="Brochure">Brochure</a>
 <a class="navigator-trial-btn iveron-hero-action" href="#navigator-trial" data-de="iVeron Requirements Navigator" data-en="iVeron Requirements Navigator">iVeron Requirements Navigator</a>
 </div></div><div aria-label="Industrial construction project" class="hero-photo" role="img"></div></section>
 <section class="phase-model" id="model">
@@ -219,6 +219,30 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
     }
   }
   triggers.forEach(button=>button.addEventListener('click',()=>toggle(button)));
+})();
+</script>
+
+<script id="iveron-brochure-language-download">
+(function(){
+  const link=document.getElementById('iveronBrochureDownload');
+  if(!link)return;
+  const files={de:'Iveron_Brochure_2026.pdf',en:'Iveron_Brochure_2026_EN.pdf'};
+  function selectedLanguage(){
+    const active=document.querySelector('.lang-switch button.active[data-lang]');
+    return active?.dataset.lang==='de'?'de':'en';
+  }
+  function setBrochureLanguage(lang){
+    const file=files[lang==='de'?'de':'en'];
+    link.setAttribute('href',file);
+    link.setAttribute('download',file);
+  }
+  setBrochureLanguage(selectedLanguage());
+  document.querySelectorAll('.lang-switch button[data-lang]').forEach(function(button){
+    button.addEventListener('click',function(){setBrochureLanguage(button.dataset.lang);});
+  });
+  // The file is selected once more when downloading, so it also works after
+  // language changes triggered elsewhere in the website.
+  link.addEventListener('click',function(){setBrochureLanguage(selectedLanguage());});
 })();
 </script>
 </body></html>
