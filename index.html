@@ -173,7 +173,10 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
  #model .phases .thumb{height:170px!important;width:100%!important;margin:0 0 10px!important}
  #model .iv-phase-number{flex-basis:44px;width:44px;height:44px;font-size:18px}
  #model .phase-details{padding:0 22px 25px}
- #model .phase-detail{padding:18px!important}
+ #model .phase-detail{padding:18px!important;width:100%!important;box-sizing:border-box!important;margin:16px 0 0!important}
+ /* Smartphone only: phase content appears inside its own card, not below all five. */
+ #model .phases article{overflow:visible!important}
+ #model .phase-details{display:none!important}
 }
 @media(prefers-reduced-motion:reduce){#model .iv-phase-number{animation:none}}
 </style>
@@ -183,9 +186,28 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
   const model=document.getElementById('model');
   if(!model)return;
   const triggers=[...model.querySelectorAll('.iv-phase-number')];
-  const details=[...model.querySelectorAll('.phase-details .phase-detail')];
+  const originalContainer=model.querySelector('.phase-details');
+  const details=[...originalContainer.querySelectorAll('.phase-detail')];
+  const mobile=window.matchMedia('(max-width: 600px)');
+
+  // The existing goal/scope elements are reused, not duplicated: language switching
+  // and original styling therefore continue working on both devices.
+  function arrange(){
+    if(mobile.matches){
+      details.forEach(detail=>{
+        const card=model.querySelector('.phases article[data-phase="'+detail.dataset.detail+'"]');
+        if(card && detail.parentElement!==card) card.appendChild(detail);
+      });
+    }else{
+      details.forEach(detail=>originalContainer.appendChild(detail));
+    }
+  }
+  arrange();
+  if(mobile.addEventListener)mobile.addEventListener('change',arrange);
+  else mobile.addListener(arrange);
+
   function toggle(button){
-    const target=model.querySelector('#'+button.getAttribute('aria-controls'));
+    const target=document.getElementById(button.getAttribute('aria-controls'));
     if(!target)return;
     const shouldOpen=!target.classList.contains('iv-is-open');
     details.forEach(item=>item.classList.remove('iv-is-open'));
