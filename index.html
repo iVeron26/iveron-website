@@ -46,11 +46,11 @@
 </div></div><div aria-label="Industrial construction project" class="hero-photo" role="img"></div></section>
 <section class="phase-model" id="model">
 <div class="phases">
-<article data-phase="concept"><div class="phase-head"><span>01</span><h3 data-de="Konzept" data-en="Concept">Concept</h3></div><div class="thumb concept"></div><p data-de="Anforderungen verstehen und Chancen erkennen." data-en="Understand requirements and identify opportunities.">Understand requirements and identify opportunities.</p><button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-concept" aria-label="Open Concept details">↓</button></article>
-<article data-phase="definition"><div class="phase-head"><span>02</span><h3 data-de="Definition" data-en="Definition">Definition</h3></div><div class="thumb definition"></div><p data-de="Umfang, Strategie und regelkonforme Prozesse definieren." data-en="Define scope, strategy and compliant processes.">Define scope, strategy and compliant processes.</p><button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-definition" aria-label="Open Definition details">↓</button></article>
-<article data-phase="execution"><div class="phase-head"><span>03</span><h3 data-de="Umsetzung" data-en="Execution">Execution</h3></div><div class="thumb execution"></div><p data-de="Effiziente und robuste Prozesse umsetzen." data-en="Implement efficient and robust processes.">Implement efficient and robust processes.</p><button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-execution" aria-label="Open Execution details">↓</button></article>
-<article data-phase="turnover"><div class="phase-head"><span>04</span><h3 data-de="Übergabe" data-en="Turnover">Turnover</h3></div><div class="thumb turnover"></div><p data-de="Erfolgreiche Übergabe und Hochlauf ermöglichen." data-en="Enable successful handover and ramp-up.">Enable successful handover and ramp-up.</p><button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-turnover" aria-label="Open Turnover details">↓</button></article>
-<article data-phase="aftersales"><div class="phase-head"><span>05</span><h3 data-de="Aftersales" data-en="Aftersales">Aftersales</h3></div><div class="thumb aftersales"></div><p data-de="Kontinuierliche Leistung und Service unterstützen." data-en="Support continuous performance and service.">Support continuous performance and service.</p><button class="phase-toggle" type="button" aria-expanded="false" aria-controls="phase-aftersales" aria-label="Open Aftersales details">↓</button></article>
+<article data-phase="concept"><div class="phase-head"><button type="button" class="iv-phase-number" aria-controls="phase-concept" aria-expanded="false" aria-label="Phase 01 – Ziel und Umfang anzeigen">01</button><h3 data-de="Konzept" data-en="Concept">Concept</h3></div><div class="thumb concept"></div><p data-de="Anforderungen verstehen und Chancen erkennen." data-en="Understand requirements and identify opportunities.">Understand requirements and identify opportunities.</p></article>
+<article data-phase="definition"><div class="phase-head"><button type="button" class="iv-phase-number" aria-controls="phase-definition" aria-expanded="false" aria-label="Phase 02 – Ziel und Umfang anzeigen">02</button><h3 data-de="Definition" data-en="Definition">Definition</h3></div><div class="thumb definition"></div><p data-de="Umfang, Strategie und regelkonforme Prozesse definieren." data-en="Define scope, strategy and compliant processes.">Define scope, strategy and compliant processes.</p></article>
+<article data-phase="execution"><div class="phase-head"><button type="button" class="iv-phase-number" aria-controls="phase-execution" aria-expanded="false" aria-label="Phase 03 – Ziel und Umfang anzeigen">03</button><h3 data-de="Umsetzung" data-en="Execution">Execution</h3></div><div class="thumb execution"></div><p data-de="Effiziente und robuste Prozesse umsetzen." data-en="Implement efficient and robust processes.">Implement efficient and robust processes.</p></article>
+<article data-phase="turnover"><div class="phase-head"><button type="button" class="iv-phase-number" aria-controls="phase-turnover" aria-expanded="false" aria-label="Phase 04 – Ziel und Umfang anzeigen">04</button><h3 data-de="Übergabe" data-en="Turnover">Turnover</h3></div><div class="thumb turnover"></div><p data-de="Erfolgreiche Übergabe und Hochlauf ermöglichen." data-en="Enable successful handover and ramp-up.">Enable successful handover and ramp-up.</p></article>
+<article data-phase="aftersales"><div class="phase-head"><button type="button" class="iv-phase-number" aria-controls="phase-aftersales" aria-expanded="false" aria-label="Phase 05 – Ziel und Umfang anzeigen">05</button><h3 data-de="Aftersales" data-en="Aftersales">Aftersales</h3></div><div class="thumb aftersales"></div><p data-de="Kontinuierliche Leistung und Service unterstützen." data-en="Support continuous performance and service.">Support continuous performance and service.</p></article>
 </div>
 <div class="phase-details">
 <section class="phase-detail" id="phase-concept" data-detail="concept"><h4><strong data-de="Ziel:" data-en="Goal:">Goal:</strong> <span data-de="Schnelle fachliche Einschätzung und Empfehlung während der Ausschreibung, um Kosten der Leistung minimal zu halten sowie eine E2E-Betrachtung zu analysieren." data-en="Rapid technical assessment and recommendation during the tender phase to keep service costs to a minimum while providing an end-to-end perspective.">Rapid technical assessment and recommendation during the tender phase to keep service costs to a minimum while providing an end-to-end perspective.</span></h4><h5 data-de="Umfang:" data-en="Scope:">Scope:</h5><ul><li data-de="Remote-Analyse eines abgegrenzten technischen oder qualitativen Themas" data-en="Remote analysis of a defined technical or quality-related topic">Remote analysis of a defined technical or quality-related topic</li><li data-de="Durchsicht ausgewählter Unterlagen (z. B. Spezifikation, Lieferantendokumentation, Prüfplan, etc.)" data-en="Review of selected documents (e.g. specification, supplier documentation, inspection plan, etc.)">Review of selected documents (e.g. specification, supplier documentation, inspection plan, etc.)</li><li data-de="Kurzberatung inkl. Handlungsempfehlungen" data-en="Short consultation including recommended actions">Short consultation including recommended actions</li></ul></section>
@@ -143,4 +143,60 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
  panel.addEventListener('click',e=>{if(e.target===panel)setOpen(false)});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)setOpen(false)});
 })();
-</script></body></html>
+</script>
+<style id="iv-phase-upgrade-styles">
+/* Applies only to the existing five-phase area; all other site sections unchanged */
+#model .phases{align-items:start;row-gap:28px;padding-bottom:33px}
+#model .phases article{min-width:0}
+#model .phase-head{display:flex!important;align-items:center!important;gap:9px!important;min-height:45px!important;margin-bottom:13px!important}
+#model .phase-head h3{margin:0!important;line-height:1.2!important}
+#model .iv-phase-number{position:relative;isolation:isolate;flex:0 0 47px;display:inline-grid;place-items:center;width:47px;height:47px;padding:0;border:2px solid white;border-radius:50%;background:#006b3c;color:white!important;font:800 19px/1 Arial,Helvetica,sans-serif;cursor:pointer;box-shadow:0 0 0 2px rgba(0,107,60,.2);animation:iv-number-pulse 2s ease-out infinite;transition:transform .2s,background .2s}
+#model .iv-phase-number:hover{background:#008453;transform:scale(1.08)}
+#model .iv-phase-number:focus-visible{outline:3px solid #9bdb81;outline-offset:3px}
+#model .iv-phase-number[aria-expanded="true"]{background:#003e2a;animation:none;box-shadow:0 0 0 5px #bfe0cc}
+@keyframes iv-number-pulse{0%{box-shadow:0 0 0 0 rgba(0,107,60,.58),0 0 0 0 rgba(0,107,60,.35)}55%{box-shadow:0 0 0 10px rgba(0,107,60,0),0 0 0 18px rgba(0,107,60,0)}100%{box-shadow:0 0 0 0 rgba(0,107,60,0),0 0 0 0 rgba(0,107,60,0)}}
+/* Original five photos, cropped proportionally rather than stretched */
+#model .phases .thumb{height:clamp(145px,11vw,205px)!important;min-height:145px;background-size:cover!important;background-repeat:no-repeat!important;margin-bottom:12px}
+#model .phases article>p{padding-right:0!important}
+/* Keep original simple goal/scope design in page, shown under the cards */
+#model .phase-details{padding:0 5.4vw 30px;background:white}
+#model .phase-detail{display:none!important;max-width:none!important;margin:0!important;padding:22px 28px!important;border:1px solid #d8e5df!important;border-top:2px solid #006b3c!important;border-radius:0!important;background:#fff!important;color:#17352c!important;box-shadow:none!important}
+#model .phase-detail.iv-is-open{display:block!important}
+#model .phase-detail h4{font-size:16px!important;font-weight:400!important;line-height:1.55!important;margin:0 0 16px!important}
+#model .phase-detail h5{font-size:15px!important;margin:0 0 9px!important;color:inherit!important}
+#model .phase-detail ul{margin:0!important;padding-left:25px!important}
+#model .phase-detail li{font-size:14px!important;line-height:1.7!important}
+@media(max-width:1000px){#model .phases .thumb{height:170px!important}}
+@media(max-width:600px){
+ #model .phases article{display:block!important;min-width:0!important;padding:0 0 20px!important}
+ #model .phase-head{display:flex!important;gap:12px!important}
+ #model .phases .thumb{height:170px!important;width:100%!important;margin:0 0 10px!important}
+ #model .iv-phase-number{flex-basis:44px;width:44px;height:44px;font-size:18px}
+ #model .phase-details{padding:0 22px 25px}
+ #model .phase-detail{padding:18px!important}
+}
+@media(prefers-reduced-motion:reduce){#model .iv-phase-number{animation:none}}
+</style>
+
+<script id="iv-phase-upgrade-script">
+(function(){
+  const model=document.getElementById('model');
+  if(!model)return;
+  const triggers=[...model.querySelectorAll('.iv-phase-number')];
+  const details=[...model.querySelectorAll('.phase-details .phase-detail')];
+  function toggle(button){
+    const target=model.querySelector('#'+button.getAttribute('aria-controls'));
+    if(!target)return;
+    const shouldOpen=!target.classList.contains('iv-is-open');
+    details.forEach(item=>item.classList.remove('iv-is-open'));
+    triggers.forEach(item=>item.setAttribute('aria-expanded','false'));
+    if(shouldOpen){
+      target.classList.add('iv-is-open');
+      button.setAttribute('aria-expanded','true');
+      window.setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+    }
+  }
+  triggers.forEach(button=>button.addEventListener('click',()=>toggle(button)));
+})();
+</script>
+</body></html>
