@@ -82,7 +82,7 @@
   <a class="pill save-contact-mobile" href="iveron-kontakt.vcf" download="iVeron-GbR.vcf" data-de="Kontaktdaten speichern ↓" data-en="Save contact details ↓">Save contact details ↓</a>
 </div>
 <small data-de="Hamburg · Heidelberg · Deutschland" data-en="Hamburg · Heidelberg · Germany">Hamburg · Heidelberg · Germany</small></section>
-</main><footer><img alt="iVeron" class="footer-brand" src="assets/iveron-logo-original.png"/><p>from Tender to turnover</p><div><a data-de="Kontakt" data-en="Contact" href="mailto:info@iveron.de">Contact</a><a data-de="Impressum" data-en="Imprint" href="#">Imprint</a><a data-de="Datenschutz" data-en="Privacy" href="#">Privacy</a></div><small>© 2026 iVeron GbR · Partners: Yannick Luft, Markus Wieclaw</small></footer><script src="script.js"></script>
+</main><footer><img alt="iVeron" class="footer-brand" src="assets/iveron-logo-original.png"/><p>from Tender to turnover</p><div><a data-de="Kontakt" data-en="Contact" href="#iveron-contact-modal" id="iveronFooterContact">Contact</a><a data-de="Impressum" data-en="Imprint" href="impressum.html">Imprint</a><a data-de="Datenschutz" data-en="Privacy" href="datenschutz.html">Privacy</a></div><small>© 2026 iVeron GbR · Partners: Yannick Luft, Markus Wieclaw</small></footer><script src="script.js"></script>
 <div id="navigator-trial" class="navigator-modal" aria-hidden="true">
   <a href="#" class="navigator-modal-backdrop" aria-label="Close"></a>
   <div class="navigator-modal-card">
@@ -315,4 +315,21 @@ document.getElementById('navigatorTrialForm')?.addEventListener('submit',functio
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)hide()});
 })();
 </script>
+<style id="iveron-footer-contact-css">
+#iveron-contact-modal[hidden]{display:none!important}
+#iveron-contact-modal{position:fixed;inset:0;z-index:100200;background:rgba(3,32,25,.78);display:flex;align-items:center;justify-content:center;padding:18px;box-sizing:border-box}
+#iveron-contact-modal .iv-contact-card{width:min(520px,95vw);position:relative;background:white;color:#14332c;padding:clamp(24px,5vw,45px);border-radius:6px;box-shadow:0 22px 65px #0006}
+#iveron-contact-modal .iv-contact-card h2{font-size:clamp(28px,4vw,43px);margin:5px 0 22px}
+#iveron-contact-modal .iv-contact-card a{display:block;margin:12px 0;color:#006b3c;font-weight:bold;text-decoration:none;overflow-wrap:anywhere}
+#iveron-contact-modal .iv-contact-close{position:absolute;top:12px;right:14px;border:0;border-radius:50%;background:#006b3c;color:white;font-size:26px;width:42px;height:42px;cursor:pointer}
+</style>
+<div id="iveron-contact-modal" role="dialog" aria-modal="true" aria-labelledby="iv-contact-title" hidden>
+ <div class="iv-contact-card"><button class="iv-contact-close" aria-label="Schließen" type="button">×</button>
+ <p style="letter-spacing:.19em;color:#006b3c;font-size:12px;font-weight:700" data-de="KONTAKT" data-en="CONTACT">CONTACT</p>
+ <h2 id="iv-contact-title" data-de="Sprechen wir miteinander." data-en="Let's talk.">Let's talk.</h2>
+ <a href="mailto:info@iveron.de">info@iveron.de</a><a href="tel:+4916099661392">+49 160 99 66 1392</a>
+ <p>iVeron GbR · Freiherr-vom-Stein-Straße 9, 68723 Oftersheim</p>
+ </div>
+</div>
+<script id="iveron-footer-contact-js">(function(){const b=document.getElementById('iveronFooterContact'),m=document.getElementById('iveron-contact-modal');if(!b||!m)return;const x=m.querySelector('.iv-contact-close');function show(e){e.preventDefault();m.hidden=false;x.focus()}function hide(){m.hidden=true;b.focus()}b.addEventListener('click',show);x.addEventListener('click',hide);m.addEventListener('click',e=>{if(e.target===m)hide()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!m.hidden)hide()});})();</script>
 </body></html>
