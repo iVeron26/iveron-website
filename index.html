@@ -38,24 +38,48 @@
 @media(max-width:650px){.iveron-hero-actions{gap:12px}.iveron-hero-actions .iveron-hero-action{min-height:44px;font-size:13px;padding:0 18px}}
 </style><script defer src="https://cloud.umami.is/script.js" data-website-id="f84f3e52-c0da-43a5-ab06-39b0c851b154"></script>
 <style id="iv-comparison-style">
-.iv-compare{background:#f5f8f6;padding:92px max(5%,calc((100vw - 1240px)/2));color:#123c2c;font-family:inherit}
-.iv-compare *{box-sizing:border-box}.iv-compare .ivc-kicker{color:#126b4c;font-weight:800;letter-spacing:.19em;font-size:12px;text-transform:uppercase;margin-bottom:14px}
-.iv-compare h2{font-size:clamp(30px,4.4vw,54px);letter-spacing:-.035em;line-height:1.08;margin:0 0 16px;color:#103c2c}
-.iv-compare .ivc-lead{font-size:clamp(15px,1.5vw,18px);color:#52675f;max-width:740px;line-height:1.7;margin:0 0 30px}
-.ivc-switch{display:inline-flex;gap:5px;border-radius:999px;padding:5px;background:#e2ebe6;border:1px solid #c5d8ce;margin-bottom:30px}
-.ivc-switch button{border:0;background:transparent;font:inherit;font-weight:800;font-size:15px;color:#476759;border-radius:999px;padding:13px 28px;cursor:pointer;transition:.2s}
-.ivc-switch button[aria-pressed="true"]{background:#075437;color:white;box-shadow:0 5px 14px #0b423128}
-.ivc-panel{display:none;background:white;border:1px solid #dce8e1;border-radius:22px;padding:clamp(20px,3.4vw,42px);box-shadow:0 15px 48px #0d3e2510;min-height:380px;animation:ivcIn .3s ease}
-.ivc-panel.is-active{display:block}@keyframes ivcIn{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-.ivc-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:28px}.ivc-head h3{margin:0;font-size:clamp(22px,2.6vw,30px);color:#153e30}.ivc-head span{font-size:13px;color:#607269;font-weight:600}
-.ivc-flow{display:grid;grid-template-columns:minmax(155px,1fr) minmax(180px,1.4fr) minmax(145px,1fr);align-items:center;gap:16px;margin-bottom:23px}
-.ivc-source,.ivc-target{background:#f3f7f4;border-radius:16px;padding:20px 14px;text-align:center;border:1px solid #dce9e1}.ivc-source strong,.ivc-target strong{display:block;font-size:16px}.ivc-source small,.ivc-target small{display:block;color:#6b8074;font-size:12px;margin-top:6px}.ivc-cats{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:15px}.ivc-cats em{font-style:normal;color:#275542;background:#e4eee8;border-radius:999px;font-size:11px;padding:6px 9px}
-.ivc-mess{height:148px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.ivc-mess svg{width:100%;height:100%;overflow:visible}.ivc-mess path{fill:none;stroke:#649f7a;stroke-width:2.2;stroke-linecap:round;opacity:.75}.ivc-mess .ivc-muted{stroke:#a0b9a9;opacity:.6}
-.ivc-center{display:flex;align-items:center;flex-direction:column;gap:14px}.ivc-hub{width:158px;height:158px;max-width:100%;border:3px solid #167448;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 60%,#e5f5e8);box-shadow:0 0 0 8px #dcefe3;color:#07462c;text-align:center}
-.ivc-hub strong{font-size:26px;letter-spacing:-.07em}.ivc-hub small{font-size:10px;letter-spacing:.04em}.ivc-route{width:100%;height:6px;background:#14774a;border-radius:999px;position:relative;margin-top:7px}.ivc-route:before,.ivc-route:after{content:"";position:absolute;top:-7px;width:16px;height:16px;background:#e8f3e9;border:3px solid #14774a;border-radius:50%}.ivc-route:before{left:5px}.ivc-route:after{right:5px}
-.ivc-output{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}.ivc-output span{font-size:11px;border:1px solid #bad7c6;background:#edf7ee;border-radius:999px;padding:7px 10px;color:#0c6241;font-weight:800}
-.ivc-summary{font-size:16px;line-height:1.6;color:#445f50;margin:0;text-align:center}.ivc-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.ivc-benefits div{padding:18px;border-radius:14px;background:#e7f3ea;color:#145a3c}.ivc-benefits strong{display:block;font-size:14px;margin-bottom:6px}.ivc-benefits small{font-size:12px;line-height:1.4;display:block;color:#49705d}
-@media(max-width:720px){.iv-compare{padding:62px 18px}.ivc-flow{grid-template-columns:1fr;gap:13px}.ivc-mess{height:96px;transform:rotate(90deg);max-width:190px;margin:auto;width:96px}.ivc-hub{width:130px;height:130px}.ivc-route{width:5px;height:56px;margin:0}.ivc-route:before,.ivc-route:after{left:-6px;top:4px}.ivc-route:after{top:auto;bottom:4px}.ivc-benefits{grid-template-columns:1fr}.ivc-switch{display:flex;width:100%}.ivc-switch button{flex:1;padding:13px 10px}.ivc-panel{min-height:0}.ivc-head{margin-bottom:20px}}
+/* iVeron V22 – widescreen, corporate comparison directly following the five phases */
+.iv-compare{background:#fff!important;color:#143e2d;font-family:inherit;padding:clamp(60px,5.5vw,98px) clamp(22px,3.5vw,76px) clamp(76px,6vw,112px);width:100%;max-width:none;margin:0;position:relative;border-top:1px solid #e2eae5}
+.iv-compare *{box-sizing:border-box}
+.iv-compare:before{content:"";position:absolute;top:0;left:3.5%;width:105px;height:3px;background:#085c3d}
+.iv-compare .ivc-kicker{color:#096040;font-weight:800;letter-spacing:.19em;font-size:12px;text-transform:uppercase;margin:0 0 12px}
+.iv-compare h2{font-size:clamp(32px,3.55vw,53px);letter-spacing:-.035em;line-height:1.12;margin:0 0 16px;color:#123d2e}
+.iv-compare .ivc-lead{font-size:clamp(15px,1.2vw,18px);color:#52675e;max-width:860px;line-height:1.7;margin:0 0 26px}
+.ivc-switch{display:inline-flex;gap:3px;border-radius:999px;padding:5px;background:#f4f7f5;border:1px solid #d2dfd7;margin:0 0 25px}
+.ivc-switch button{border:0;background:transparent;font:inherit;font-weight:750;font-size:15px;color:#37624b;border-radius:999px;padding:13px 36px;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.ivc-switch button:focus-visible{outline:3px solid #82ae90;outline-offset:2px}
+.ivc-switch button[aria-pressed="true"]{background:#075437;color:#fff;box-shadow:0 4px 13px #0b423120}
+.ivc-panel{display:none;background:#fff;border:1px solid #d7e4dc;border-top:4px solid #0e6342;border-radius:10px;padding:clamp(24px,3vw,47px);box-shadow:0 10px 35px #123c2810;min-height:340px;animation:ivcIn .28s ease;width:100%;max-width:none}
+.ivc-panel.is-active{display:block}@keyframes ivcIn{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.ivc-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:32px;border-bottom:1px solid #e5ece8;padding-bottom:18px}
+.ivc-head h3{margin:0;font-size:clamp(22px,2vw,31px);color:#123e2c;font-weight:750}
+.ivc-head span{font-size:13px;color:#60806e;font-weight:650;letter-spacing:.025em}
+.ivc-flow{display:grid;grid-template-columns:minmax(210px,1fr) minmax(280px,1.65fr) minmax(210px,1fr);align-items:center;gap:clamp(15px,2.7vw,48px);margin-bottom:32px;min-height:205px}
+.ivc-source,.ivc-target{background:#f6f9f7;border-radius:10px;padding:28px 18px;text-align:center;border:1px solid #dce8e0;min-height:145px;display:flex;flex-direction:column;justify-content:center}
+.ivc-source strong,.ivc-target strong{display:block;font-size:clamp(15px,1.15vw,19px);color:#134a34}
+.ivc-source small,.ivc-target small{display:block;color:#5a7465;font-size:13px;margin-top:7px}
+.ivc-cats{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:16px}
+.ivc-cats em{font-style:normal;color:#245a40;background:#e6f1ea;border:1px solid #d7e8db;border-radius:5px;font-size:12px;padding:6px 10px}
+.ivc-mess{height:190px;position:relative;overflow:visible;display:flex;align-items:center;justify-content:center}
+.ivc-mess svg{width:100%;height:100%;overflow:visible}
+.ivc-mess path{fill:none;stroke:#568d6c;stroke-width:2.1;stroke-linecap:round;opacity:.76}
+.ivc-mess .ivc-muted{stroke:#afc6b8;opacity:.75}
+.ivc-center{display:flex;align-items:center;flex-direction:column;gap:16px;position:relative}
+.ivc-hub{width:160px;height:160px;max-width:100%;border:2px solid #156a47;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#fff 55%,#ebf6ee);box-shadow:0 0 0 7px #e4f0e7;color:#07462c;text-align:center}
+.ivc-hub strong{font-size:29px;letter-spacing:-.065em}.ivc-hub small{font-size:10px;letter-spacing:.035em}
+.ivc-route{width:85%;height:5px;background:#116840;border-radius:999px;position:relative;margin-top:7px}
+.ivc-route:before,.ivc-route:after{content:"";position:absolute;top:-6px;width:15px;height:15px;background:#fff;border:3px solid #126b45;border-radius:50%}
+.ivc-route:before{left:0}.ivc-route:after{right:0}
+.ivc-output{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.ivc-output span{font-size:12px;border:1px solid #c6ddcd;background:#eff7f0;border-radius:6px;padding:9px 13px;color:#0d6240;font-weight:750}
+.ivc-summary{font-size:clamp(15px,1.2vw,18px);line-height:1.65;color:#456754;margin:0;text-align:center}
+.ivc-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.ivc-benefits div{padding:23px;border-radius:7px;background:#f0f7f2;border-left:3px solid #18744e;color:#145a3c}
+.ivc-benefits strong{display:block;font-size:15px;margin-bottom:8px}
+.ivc-benefits small{font-size:13px;line-height:1.55;display:block;color:#557464}
+@media(min-width:1600px){.iv-compare{padding-left:4vw;padding-right:4vw}.ivc-flow{grid-template-columns:minmax(270px,1fr) minmax(420px,1.65fr) minmax(270px,1fr)}}
+@media(max-width:880px){.ivc-flow{grid-template-columns:minmax(145px,1fr) minmax(160px,1.15fr) minmax(145px,1fr);gap:12px}.ivc-source,.ivc-target{padding:18px 10px}.ivc-hub{height:132px;width:132px}.ivc-mess{height:150px}.ivc-benefits div{padding:16px}}
+@media(max-width:620px){.iv-compare{padding:55px 18px 74px}.iv-compare:before{left:18px}.ivc-switch{display:flex;width:100%}.ivc-switch button{flex:1;padding:13px 9px}.ivc-panel{padding:22px 16px;min-height:0}.ivc-head{margin-bottom:24px;padding-bottom:15px}.ivc-flow{grid-template-columns:1fr;gap:18px}.ivc-mess{height:88px;transform:rotate(90deg);max-width:185px;margin:auto;width:88px;overflow:hidden}.ivc-hub{width:130px;height:130px}.ivc-route{width:5px;height:42px;margin:0}.ivc-route:before,.ivc-route:after{left:-5px;top:0}.ivc-route:after{top:auto;bottom:0}.ivc-benefits{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.ivc-panel{animation:none}.ivc-switch button{transition:none}}
 </style></head><body>
 <header class="topbar"><a aria-label="iVeron home" class="brand-logo" href="#top"><img alt="iVeron – from Tender to turnover" src="assets/iveron-logo-original.png"/></a><button aria-label="Open menu" class="menu">☰</button><nav><a data-de="Start" data-en="Home" href="#top">Home</a><a data-de="Unsere Leistungen" data-en="Our Services" href="#model">Our Services</a><a data-de="Warum iVeron" data-en="Why iVeron" href="#why">Why iVeron</a><a href="#assessment">Quick Assessment</a><a data-de="Über uns" data-en="About us" href="#about">About us</a><a data-de="Kontakt" data-en="Contact" href="#contact">Contact</a></nav><div aria-label="Language selection" class="lang-switch"><button class="active" data-lang="en" type="button">EN</button><button class="" data-lang="de" type="button">DE</button></div><a class="pill topcta" data-de="Kontakt →" data-en="Get in touch →" href="mailto:info@iveron.de">Get in touch  →</a></header>
@@ -85,8 +109,8 @@
 </div>
 </section>
 <section class="iv-compare" id="difference" aria-label="Before and with iVeron">
- <p class="ivc-kicker" data-de="UNSER BEITRAG" data-en="THE DIFFERENCE">THE DIFFERENCE</p>
- <h2 data-de-html="Wir ordnen Komplexität.&lt;br/&gt;Sie gewinnen Klarheit." data-en-html="We bring order to complexity.&lt;br/&gt;You gain clarity.">We bring order to complexity.<br/>You gain clarity.</h2>
+ <p class="ivc-kicker" data-de="UNSER BEITRAG" data-en="OUR CONTRIBUTION">THE DIFFERENCE</p>
+ <h2 data-de-html="Wir ordnen Komplexität.&lt;br/&gt;Sie gewinnen Klarheit." data-en-html="We structure complexity.&lt;br/&gt;You gain clarity.">We bring order to complexity.<br/>You gain clarity.</h2>
  <p class="ivc-lead" data-de="Viele Anforderungen, unterschiedliche Ansprechpartner, hoher Abstimmungsaufwand. Entdecken Sie, wie aus Komplexität ein klarer Weg zur Umsetzung wird." data-en="Many requirements, different stakeholders, extensive coordination. Discover how complexity becomes a clear path to execution.">Many requirements, different stakeholders, extensive coordination. Discover how complexity becomes a clear path to execution.</p>
  <div class="ivc-switch" role="group" aria-label="Comparison views"><button type="button" id="ivc-before" aria-pressed="true" aria-controls="ivc-panel-before" data-de="Bisher" data-en="Before">Before</button><button type="button" id="ivc-after" aria-pressed="false" aria-controls="ivc-panel-after" data-de="Mit iVeron" data-en="With iVeron">With iVeron</button></div>
  <div class="ivc-panel is-active" id="ivc-panel-before" role="region" aria-label="Before iVeron">
