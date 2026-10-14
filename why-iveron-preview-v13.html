@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why iVeron – Preview V13</title>
+  <style>
+    :root{
+      --green:#216b3a; --green-dark:#18542e; --bg:#f3f4f1; --text:#0f2d22; --muted:#66756d;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(90deg,#f3f4f1 0 50%,#226d3a 50% 100%);color:var(--text)}
+    .wrap{width:min(1800px,100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+    .panel{padding:56px 48px 42px}.panel.right{color:#fff}.eyebrow{font-size:14px;letter-spacing:4px;font-weight:700;text-transform:uppercase;margin-bottom:24px;color:#c96f53}.right .eyebrow{color:#d6ef6c}
+    h1{margin:0 0 22px;font-size:64px;line-height:1.05;font-weight:800} p.lead{margin:0 0 28px;font-size:18px;line-height:1.5;max-width:760px;color:#66756d}.right p.lead{color:#eaf2ed}
+    .diagram{position:relative;margin-top:18px;background:rgba(255,255,255,.38);border-radius:14px;min-height:330px;border:1px solid rgba(38,97,61,.18);overflow:hidden;padding:28px 70px}
+    .right .diagram{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
+    .gridbg{position:absolute;inset:0;background-image:linear-gradient(rgba(74,115,85,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(74,115,85,.08) 1px,transparent 1px);background-size:28px 28px}
+    .side{position:absolute;top:28px;bottom:66px;width:72px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:1px;writing-mode:vertical-rl;border-radius:8px}
+    .side.left{left:18px}.side.right{right:18px}
+    .center-stage{position:relative;height:230px;display:flex;align-items:center;justify-content:center}
+    .hline{position:absolute;left:120px;right:120px;top:50%;height:4px;margin-top:-2px;background:#2aaa5c;z-index:1}
+    .cluster{position:absolute;width:250px;height:150px;left:110px;top:40px;z-index:2}
+    .doc{position:absolute;width:86px;height:52px;background:#f7faf6;border:1px solid #b8c9bd;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.07);padding:10px 8px;font-size:12px;font-weight:700;color:var(--green-dark)}
+    .doc .small-line{display:block;height:3px;background:#b7cdbd;margin-top:7px;border-radius:2px}.doc .small-line:nth-child(3){width:65%}
+    .d1{left:0;top:8px;transform:rotate(-8deg)} .d2{left:90px;top:0;transform:rotate(5deg)} .d3{left:190px;top:18px;transform:rotate(-3deg)}
+    .d4{left:24px;top:104px;transform:rotate(8deg)} .d5{left:138px;top:112px;transform:rotate(-6deg)} .d6{left:196px;top:96px;transform:rotate(-4deg)}
+    .conn{position:absolute;height:2px;background:#a9bbb0;transform-origin:left center}
+    .logo-card{position:absolute;left:50%;top:20px;transform:translateX(-50%);width:190px;height:92px;background:#fff;border:1px solid #c5d4c8;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08);z-index:3;display:flex;align-items:center;justify-content:center;flex-direction:column}
+    .logo-main{font-size:28px;letter-spacing:2px;color:#111}.logo-main .v,.logo-main .e3{color:#1f7d42}.logo-sub{font-size:10px;color:#666;margin-top:5px;font-style:italic}
+    .boxes{position:absolute;left:430px;right:130px;top:78px;display:flex;gap:18px;align-items:center;z-index:2}
+    .process-box{width:120px;height:84px;background:#fff;border:2px solid #2c7447;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.06);padding:12px;color:#0e4126;font-weight:700;display:flex;flex-direction:column}
+    .process-box span{display:block;height:4px;background:#b7cdbd;border-radius:2px;margin-top:8px;width:70%}
+    .benefits{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:12px;z-index:2;flex-wrap:wrap}
+    .chip{padding:9px 14px;border-radius:999px;font-size:14px;font-weight:700;background:#f7f8f6;border:1px solid #9fb9a7;color:#285c39}
+    .left .chip.bad{background:#f7ece9;border-color:#e4c3b9;color:#b45a43}.right .chip{background:rgba(255,255,255,.08);border-color:#86c59f;color:#fff}
+    @media (max-width:1100px){body{background:#f3f4f1}.wrap{grid-template-columns:1fr}.panel.right{background:#226d3a}h1{font-size:42px}.diagram{padding:20px 56px;min-height:360px}.boxes{left:220px;right:90px;gap:12px}.process-box{width:100px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<section class="panel left">
+<div class="eyebrow">01 / Bisher</div>
+<h1>Viele Dokumente. Wenig Überblick.</h1>
+<p class="lead">Anforderungen entstehen in verschiedenen Abteilungen. Dokumente werden mehrfach abgestimmt, Informationen sind verstreut.</p>
+<div class="diagram">
+<div class="gridbg"></div>
+<div class="side left">Kunde</div><div class="side right">Zulieferer</div>
+<div class="center-stage">
+<div class="cluster">
+<div class="conn" style="left:48px;top:30px;width:122px;transform:rotate(-6deg)"></div>
+<div class="conn" style="left:66px;top:40px;width:160px;transform:rotate(28deg)"></div>
+<div class="conn" style="left:46px;top:42px;width:74px;transform:rotate(65deg)"></div>
+<div class="conn" style="left:90px;top:22px;width:148px;transform:rotate(8deg)"></div>
+<div class="conn" style="left:90px;top:32px;width:150px;transform:rotate(39deg)"></div>
+<div class="conn" style="left:112px;top:58px;width:72px;transform:rotate(104deg)"></div>
+<div class="conn" style="left:36px;top:118px;width:185px;transform:rotate(-4deg)"></div>
+<div class="conn" style="left:54px;top:111px;width:205px;transform:rotate(-32deg)"></div>
+<div class="conn" style="left:172px;top:50px;width:56px;transform:rotate(68deg)"></div>
+<div class="doc d1">Spezifikation<span class="small-line"></span><span class="small-line"></span></div>
+<div class="doc d2">Qualität<span class="small-line"></span><span class="small-line"></span></div>
+<div class="doc d3">Revision<span class="small-line"></span><span class="small-line"></span></div>
+<div class="doc d4">Prüfplan<span class="small-line"></span><span class="small-line"></span></div>
+<div class="doc d5">Service<span class="small-line"></span><span class="small-line"></span></div>
+<div class="doc d6">Freigabe<span class="small-line"></span><span class="small-line"></span></div>
+</div></div>
+<div class="benefits"><div class="chip bad">Doppelte Abstimmung</div><div class="chip bad">Unklarer Scope</div><div class="chip bad">Späte Änderungen</div></div>
+</div></section>
+
+<section class="panel right">
+<div class="eyebrow">02 / Mit iVeron</div>
+<h1>Klare Struktur. Verlässliche Umsetzung.</h1>
+<p class="lead">Wir analysieren die Anforderungen, definieren Verantwortlichkeiten und schaffen nachvollziehbare, standardisierte Ergebnisse.</p>
+<div class="diagram">
+<div class="gridbg"></div>
+<div class="side left">Kunde</div><div class="side right">Zulieferer</div>
+<div class="center-stage">
+<div class="hline"></div>
+<div class="logo-card"><div class="logo-main">i<span class="v">V</span>er<span class="e3">≡</span>n</div><div class="logo-sub">from Tender to turnover</div></div>
+<div class="boxes">
+<div class="process-box">Anforderungen<span></span><span style="width:52%"></span></div>
+<div class="process-box">Scope<span></span><span style="width:52%"></span></div>
+<div class="process-box">Maßnahmen<span></span><span style="width:52%"></span></div>
+<div class="process-box">Unterlagen<span></span><span style="width:52%"></span></div>
+</div></div>
+<div class="benefits"><div class="chip">Klarer Leistungsumfang</div><div class="chip">Einheitliche Unterlagen</div><div class="chip">Wiederverwendbare Standards</div></div>
+</div></section>
+</div></body></html>
