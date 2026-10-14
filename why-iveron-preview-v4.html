@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why iVeron – V12</title>
+  <style>
+    :root{
+      --green:#176b3a;
+      --green-dark:#0f5a31;
+      --green-soft:#eaf2ec;
+      --green-line:#8fb39a;
+      --bg:#f5f6f3;
+      --text:#0f2e2a;
+      --muted:#6f7f79;
+      --accent:#c86a4a;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    .section{
+      width:100%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:760px;
+    }
+    .col{
+      padding:48px 58px 42px;
+    }
+    .left{
+      background:#f2f3ef;
+    }
+    .right{
+      background:var(--green);
+      color:#fff;
+    }
+    .eyebrow{
+      font-size:14px;
+      letter-spacing:3px;
+      font-weight:700;
+      margin-bottom:18px;
+      text-transform:uppercase;
+    }
+    .eyebrow.left-eyebrow{color:var(--accent);}
+    .eyebrow.right-eyebrow{color:#d6ef7b;}
+    h1{
+      margin:0 0 18px;
+      font-size:40px;
+      line-height:1.05;
+      font-weight:800;
+    }
+    p.lead{
+      margin:0 0 26px;
+      font-size:17px;
+      line-height:1.55;
+      max-width:700px;
+      color:rgba(15,46,42,.72);
+    }
+    .right p.lead{color:rgba(255,255,255,.92);}
+    .viz{
+      position:relative;
+      margin-top:20px;
+      border-radius:14px;
+      overflow:hidden;
+      min-height:330px;
+      padding:26px 22px 68px;
+      border:1px solid rgba(22,107,58,.12);
+      background:
+        linear-gradient(rgba(22,107,58,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(22,107,58,.04) 1px, transparent 1px),
+        #f7f8f5;
+      background-size:24px 24px, 24px 24px, auto;
+    }
+    .right .viz{
+      background:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px),
+        rgba(255,255,255,.06);
+      background-size:24px 24px, 24px 24px, auto;
+      border-color:rgba(255,255,255,.12);
+    }
+    .vbar{
+      position:absolute;
+      top:0; bottom:0;
+      width:62px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      letter-spacing:1px;
+      writing-mode:vertical-rl;
+      text-orientation:mixed;
+      font-size:28px;
+      border-radius:0;
+    }
+    .left .vbar, .right .vbar{background:var(--green); color:#fff;}
+    .vbar.leftbar{left:0;}
+    .vbar.rightbar{right:0;}
+    .inner{
+      margin:0 80px;
+      position:relative;
+      min-height:220px;
+    }
+    .hline{
+      position:absolute;
+      left:0; right:0;
+      top:108px;
+      height:4px;
+      background:#7fa08a;
+    }
+    .right .hline{background:#2fc26d;}
+    .doc{
+      position:absolute;
+      width:116px;
+      min-height:74px;
+      background:#fff;
+      border:2px solid #d3ddd5;
+      border-radius:8px;
+      box-shadow:0 8px 18px rgba(0,0,0,.06);
+      padding:10px 10px 8px;
+      font-weight:700;
+      font-size:14px;
+      color:#23483a;
+    }
+    .right .doc{
+      border-color:#dce7de;
+    }
+    .doc:after,.doc:before{
+      content:"";
+      display:block;
+      height:4px;
+      background:#b6cabd;
+      border-radius:2px;
+      margin-top:8px;
+      width:68%;
+    }
+    .doc:after{width:48%; margin-top:6px;}
+    .doc.small{width:96px; min-height:64px; font-size:13px;}
+    .logo-box{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      top:0;
+      width:180px;
+      height:104px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+      z-index:2;
+    }
+    .logo-box img{max-width:130px; height:auto;}
+    .pill-row{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+      width:100%;
+      padding:0 90px;
+    }
+    .pill{
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      border:1.5px solid #bfcfc4;
+      background:#f7faf7;
+      color:#375443;
+      white-space:nowrap;
+    }
+    .left .pill.alert{
+      background:#f4ebe7;
+      border-color:#edd8d0;
+      color:#b15a40;
+    }
+    .right .pill{
+      background:rgba(255,255,255,.1);
+      border-color:rgba(255,255,255,.24);
+      color:#fff;
+    }
+    .label{
+      position:absolute;
+      font-size:12px;
+      color:#688176;
+      font-weight:700;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+    }
+    .right .label{color:#caefcc;}
+    @media (max-width: 1100px){
+      .section{grid-template-columns:1fr;}
+      .col{padding:38px 24px;}
+      .inner{margin:0 64px;}
+      h1{font-size:34px;}
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="col left">
+      <div class="eyebrow left-eyebrow">01 / Bisher</div>
+      <h1>Viele Dokumente. Wenig Überblick.</h1>
+      <p class="lead">Anforderungen entstehen in verschiedenen Abteilungen. Dokumente werden mehrfach abgestimmt, Informationen sind verstreut.</p>
+
+      <div class="viz">
+        <div class="vbar leftbar">Kunde</div>
+        <div class="vbar rightbar">Zulieferer</div>
+        <div class="inner">
+          <div class="doc small" style="left:18px; top:22px;">Spezifikation</div>
+          <div class="doc small" style="left:138px; top:6px;">Qualität</div>
+          <div class="doc small" style="left:55px; top:150px;">Prüfplan</div>
+          <div class="doc small" style="left:340px; top:28px;">Einkauf</div>
+          <div class="doc small" style="left:540px; top:20px;">Revision</div>
+          <div class="doc small" style="left:312px; top:164px;">Service</div>
+          <div class="doc small" style="left:502px; top:160px;">Freigabe</div>
+
+          <svg width="100%" height="250" viewBox="0 0 720 250" style="position:absolute; left:0; top:0;">
+            <g stroke="#9cb1a3" stroke-width="2.2" fill="none" opacity="0.95">
+              <line x1="115" y1="54" x2="186" y2="36"/>
+              <line x1="115" y1="54" x2="102" y2="182"/>
+              <line x1="115" y1="54" x2="355" y2="62"/>
+              <line x1="115" y1="54" x2="355" y2="188"/>
+              <line x1="186" y1="36" x2="102" y2="182"/>
+              <line x1="186" y1="36" x2="355" y2="62"/>
+              <line x1="186" y1="36" x2="560" y2="48"/>
+              <line x1="102" y1="182" x2="355" y2="62"/>
+              <line x1="102" y1="182" x2="355" y2="188"/>
+              <line x1="102" y1="182" x2="560" y2="48"/>
+              <line x1="355" y1="62" x2="560" y2="48"/>
+              <line x1="355" y1="62" x2="560" y2="176"/>
+              <line x1="355" y1="188" x2="560" y2="48"/>
+              <line x1="355" y1="188" x2="560" y2="176"/>
+            </g>
+          </svg>
+        </div>
+        <div class="pill-row">
+          <span class="pill alert">Doppelte Abstimmung</span>
+          <span class="pill alert">Unklarer Scope</span>
+          <span class="pill alert">Späte Änderungen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col right">
+      <div class="eyebrow right-eyebrow">02 / Mit iVeron</div>
+      <h1>Klare Struktur. Verlässliche Umsetzung.</h1>
+      <p class="lead">Wir analysieren die Anforderungen, definieren Verantwortlichkeiten und schaffen nachvollziehbare, standardisierte Ergebnisse.</p>
+
+      <div class="viz">
+        <div class="vbar leftbar">Kunde</div>
+        <div class="vbar rightbar">Zulieferer</div>
+        <div class="inner">
+          <div class="logo-box">
+            <img src="iveron-logo-why-v10.png" alt="iVeron Logo" />
+          </div>
+          <div class="hline"></div>
+
+          <div class="doc" style="left:28px; top:82px;">Anforderungen</div>
+          <div class="doc" style="left:195px; top:82px;">Scope</div>
+          <div class="doc" style="left:362px; top:82px;">Maßnahmen</div>
+          <div class="doc" style="left:529px; top:82px;">Unterlagen</div>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Klarer Leistungsumfang</span>
+          <span class="pill">Einheitliche Unterlagen</span>
+          <span class="pill">Wiederverwendbare Standards</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
