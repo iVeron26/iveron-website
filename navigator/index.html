@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 
-<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"/><meta content="#00723f" name="theme-color"/><title>iVeron Smart Recognition · Requirements Navigator · Desktop V28</title><style>
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"/><meta content="#00723f" name="theme-color"/><title>iVeron Smart Recognition · Requirements Navigator · Desktop V37</title><style>
 :root{--g:#00723f;--dark:#142e28;--muted:#76817c;--line:#e3e8e5;--soft:#f5f7f6}*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:#fff}.page{display:none;min-height:100svh;padding:8vh 7vw 8vh;background:#fff}.page:target{display:block}#cover{display:block}body:has(.page:target) #cover{display:none}#cover:target{display:block}.cover{background:var(--g);color:#fff;position:relative;padding-top:11vh}.logo{font-size:20vw;letter-spacing:-.075em;font-weight:300}.claim{font-style:italic;font-weight:bold;font-size:4.3vw;margin:3vw 0 0 8vw}.industries{font-size:2.55vw;margin-top:8vh;white-space:nowrap}.coverTitle{position:absolute;left:8vw;bottom:20vh;font-size:7.2vw;font-weight:bold;line-height:1.17}a{text-decoration:none;color:inherit}.start{position:absolute;left:8vw;right:8vw;bottom:7vh;border:1px solid #fff;padding:5vw;font-weight:bold;letter-spacing:.12em}.start span,.contact span{float:right}.top{display:flex;align-items:center;gap:5vw;margin-bottom:7vh}.back{color:var(--g);font-size:7vw}.mini{font-size:4.8vw;font-weight:bold}.eyebrow{font-size:2.6vw;color:var(--g);font-weight:bold;letter-spacing:.17em}h1{font-size:10vw;line-height:.98;letter-spacing:-.045em;margin:3vw 0 2vw}h1 em{font-style:normal;color:var(--g)}.lead{font-size:4vw;color:var(--muted);line-height:1.45;margin:0 0 7vh}.menu{border-top:1px solid var(--line)}.card{width:100%;border-bottom:1px solid var(--line);background:#fff;padding:5.5vw 0;display:grid;grid-template-columns:12vw 1fr 8vw;align-items:center}.num{font-size:3vw;font-weight:bold}.card b{font-size:6.5vw;letter-spacing:-.025em}.card small{display:block;color:var(--muted);font-size:2.8vw;margin-top:1.2vw}.arrow{color:var(--g);font-size:6vw;text-align:right}.groupCard,.topicCard{grid-template-columns:1fr 8vw}.groupCard b{font-size:5.5vw}.topicCard b{font-size:5vw}.contact{display:block;background:#0b4035;color:#fff;margin-top:7vh;padding:5vw;font-weight:bold;font-size:3vw;letter-spacing:.12em}.detailbox{background:var(--soft);padding:5vw;margin:5vh 0}.detailbox h3{font-size:2.6vw;color:var(--g);letter-spacing:.15em;margin:0 0 2vw}.detailbox p{font-size:4vw;line-height:1.55;margin:0}.std{background:#fff;border-left:3px solid var(--g);padding:4vw;margin-top:4vw;font-weight:bold;font-size:3.4vw}.check h2{font-size:5vw}.check div{padding:4vw 0;border-bottom:1px solid var(--line);font-size:3.8vw}.check div:before{content:"✓";color:var(--g);font-weight:bold;margin-right:3vw}.disclaimer{margin-top:6vh;font-size:2.7vw;color:#71807a;line-height:1.45;background:#eef3f1;padding:4vw}
 @media(min-width:600px){body{max-width:430px;margin:auto;box-shadow:0 0 40px #0002}.page{width:430px}.logo{font-size:86px}.claim{font-size:18px}.industries{font-size:11px}.coverTitle{font-size:31px}h1{font-size:43px}.lead{font-size:17px}}
 
@@ -1171,6 +1171,40 @@ html, body, body :is(button, input, select, textarea, option, a, label, summary,
  #ivdIntro.iv36-login-unlocked .iv36-login-panel{top:88px;left:auto}
 }
 </style>
+
+<style id="iv37-login-language-style">
+/* V37: shared DE/EN choice on the animated, protected entry screen. */
+#ivdIntro .iv37-login-head{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  margin-bottom:15px;
+}
+#ivdIntro .iv37-login-head .iv36-login-overline{
+  margin:0;line-height:1.45;min-width:0;
+}
+#ivdIntro .iv37-login-language{
+  display:inline-flex;align-items:center;gap:3px;flex:none;
+  padding:3px;border:1px solid rgba(223,255,239,.35);
+  border-radius:12px;background:rgba(245,255,248,.10)
+}
+#ivdIntro .iv37-login-language button{
+  min-width:40px;height:31px;padding:0 7px;border:0;border-radius:9px;
+  color:#daf9e7;background:transparent;font:800 12px Inter,"Segoe UI",Arial,sans-serif;
+  cursor:pointer;letter-spacing:.045em;
+}
+#ivdIntro .iv37-login-language button[aria-pressed="true"]{
+  color:#085634;background:#e9fff2;box-shadow:0 2px 8px rgba(0,0,0,.12)
+}
+#ivdIntro .iv37-login-language button:hover:not([aria-pressed="true"]){
+  background:rgba(230,255,242,.17);color:#fff
+}
+#ivdIntro .iv37-login-language button:focus-visible{
+  outline:3px solid #abf3c6;outline-offset:2px
+}
+@media(max-width:600px){
+  #ivdIntro .iv37-login-head{margin-bottom:10px;gap:8px}
+  #ivdIntro .iv37-login-language button{min-width:34px;height:27px;font-size:11px}
+}
+</style>
 </head><body>
 
 <!-- V13 cinematic full-screen splash; click the highlighted network node to open Scan. -->
@@ -1200,8 +1234,14 @@ html, body, body :is(button, input, select, textarea, option, a, label, summary,
     <p>Normen, Spezifikationen und technische Anforderungen übersichtlich erkennen und strukturieren.</p>
   </div>
   <div class="iv36-login-panel" id="iv36LoginPanel" aria-label="Anmeldung">
+    <div class="iv37-login-head">
+      <span class="iv36-login-overline">iVERON · PRIVATE ACCESS</span>
+      <div class="iv37-login-language" role="group" aria-label="Sprache wählen / Choose language">
+        <button type="button" data-iv37-lang="de" aria-pressed="true" title="Deutsch">DE</button>
+        <button type="button" data-iv37-lang="en" aria-pressed="false" title="English">EN</button>
+      </div>
+    </div>
     <div class="iv36-login-form-wrap">
-      <p class="iv36-login-overline">iVERON · PRIVATE ACCESS</p>
       <h2>Bei iVeron anmelden</h2>
       <p class="iv36-login-description">Melde dich an, um den Navigator zu starten.</p>
       <form id="iv36LoginForm" autocomplete="off" novalidate>
@@ -3980,6 +4020,30 @@ Object.assign(DE_EN,{
 });
 /* V33: dynamic recognition report and Ivy interface translations. Source documents stay untouched. */
 Object.assign(DE_EN,{"Analyseergebnis":"Analysis results","Erkannte Referenzen aus deinem Dokument":"References detected in your document","Erkannte Referenzen":"Detected references","Prüfkandidaten":"Review candidates","Scanzeit":"Analysis time","Referenzen durchsuchen":"Search references","Ergebnisse durchsuchen":"Search results","Normnummer, Titel, Fachbereich …":"Standard number, title, discipline …","Treffer filtern":"Filter results","Alle":"All","Normen":"Standards","Prüfen":"Review","Weitere":"Other","Normenfamilien / Prüfverfahren":"Standard families / test methods","Bezeichnungen / Ausgaben":"Designations / editions","Normenfamilien":"Standard families","Katalogangabe – Titel, Ausgabe und Anwendbarkeit vor Verwendung prüfen.":"Catalogue information – verify title, edition and applicability before use.","iVeron Normenwissen · V18":"iVeron Standards Knowledge · V18","Erkannt":"Detected","Prüfkandidat":"Review candidate","Prüfhinweis":"Review note","Norm":"Standard","Referenz":"Reference","Genannte Teile:":"Referenced parts:","(nicht einzeln validiert)":"(not validated individually)","Seite":"Page","Bild / ohne Seitenangabe":"Image / no page information","Im Original prüfen:":"Check in original:","Keine verlässliche Seitenangabe verfügbar.":"No reliable page number available.","Details anzeigen":"Show details","Bezeichnungen im Dokument":"Designations in document","Fundstellen (Textauszug)":"Source passages (text excerpts)","Unbestätigte Einzelreferenz – Nummer im Originalbild prüfen.":"Unconfirmed reference – verify its number in the source image.","Die Erkennung bestätigt weder die aktuelle Ausgabe noch die projektspezifische Gültigkeit oder Verbindlichkeit.":"Detection does not confirm the current edition, project-specific validity or mandatory applicability.","Keine passenden Einträge gefunden.":"No matching entries found.","Keine vollständigen Referenznummern gefunden. Prüfe den erkannten Text und die analysierten Seiten.":"No complete reference numbers found. Check the recognized text and analyzed pages.","Diagnose: Erkannten Text anzeigen":"Diagnostics: Show recognized text","Kein Text verfügbar":"No text available","Technische Auswertung":"Technical evaluation","TREFFERLISTE ALS CSV EXPORTIEREN ↓":"EXPORT RESULTS AS CSV ↓","CSV enthält weiterhin alle erkannten Bezeichnungen, Prüfhilfen und Fundstellen.":"CSV export includes all detected designations, review notes and source pages.","Dokumentnummer":"Document number","Eigene Dokumentnummer wird nicht als externe Referenz gezählt":"Document number is not counted as an external reference","Weitere Seiten":"More pages","Prüfhilfen":"Review notes","Originalfundstellen":"Original source pages","NORMEN & PRÜFVERFAHREN":"STANDARDS & TEST METHODS","KATALOGANGABEN":"CATALOGUE INFORMATION","Dokumentenverarbeitung lokal":"Local document processing","Projekt erstellen":"Create project","Kontaktdaten":"Contact details","Projekte finden":"Find projects","Wie viele Coating-Treffer?":"How many coating findings?","Frag den Navigator":"Ask the Navigator"});
+
+/* V37: translate the complete login, login feedback and full-screen intro. */
+Object.assign(DE_EN,{
+  "Bei iVeron anmelden":"Sign in to iVeron",
+  "Melde dich an, um den Navigator zu starten.":"Sign in to access the Navigator.",
+  "Benutzername":"Username",
+  "E-Mail-Adresse":"Email address",
+  "Passwort":"Password",
+  "Passwort eingeben":"Enter password",
+  "ANMELDEN →":"SIGN IN →",
+  "Anmeldung":"Sign in",
+  "Zugang freigeschaltet":"Access granted",
+  "Am pulsierenden Punkt starten":"Click the pulsing point to start",
+  "Bitte zuerst im Anmeldefenster anmelden":"Please sign in first",
+  "Bitte zuerst anmelden":"Please sign in first",
+  "Zuerst anmelden":"Sign in first",
+  "iVeron Navigator starten":"Launch iVeron Navigator",
+  "Benutzername oder Passwort ist nicht korrekt.":"Incorrect username or password.",
+  "Dieser Browser unterstützt die lokale Anmeldung nicht. Bitte Chrome oder Edge verwenden.":"This browser does not support local sign-in. Please use Chrome or Edge.",
+  "Normen, Spezifikationen und technische Anforderungen übersichtlich erkennen und strukturieren.":"Identify and organize standards, specifications and technical requirements with clarity.",
+  "Sprache wählen / Choose language":"Choose language",
+  "Vollbild einschalten":"Enter fullscreen",
+  "HIER STARTEN":"START HERE"
+});
 const EN_DE=Object.fromEntries(Object.entries(DE_EN).map(([de,en])=>[en,de]));
 const source=new WeakMap();const attrs=new WeakMap();const buttons=document.querySelectorAll('#iv31Lang button[data-language]');
 const langKey='iveron.navigator.language.v31';
@@ -4128,6 +4192,36 @@ window.iveronLanguage={get:()=>current,set:setLanguage,translate:convert,origina
  const requestAtStartup=()=>{ if(!document.fullscreenElement)enter(); };
  if(document.readyState==='complete')requestAtStartup();
  else window.addEventListener('load',requestAtStartup,{once:true});
+})();
+</script>
+
+<script id="iv37-intro-language-controller">
+(function(){
+  'use strict';
+  const buttons=[...document.querySelectorAll('#ivdIntro [data-iv37-lang]')];
+  if(!buttons.length)return;
+  function update(){
+    const lang=window.iveronLanguage?.get?.()||
+       (document.documentElement.lang==='en'?'en':'de');
+    buttons.forEach(button=>{
+      const selected=button.dataset.iv37Lang===lang;
+      button.setAttribute('aria-pressed',String(selected));
+      button.classList.toggle('selected',selected);
+    });
+  }
+  for(const button of buttons){
+    button.addEventListener('click',()=>{
+      const language=button.dataset.iv37Lang;
+      if(window.iveronLanguage?.set){
+        window.iveronLanguage.set(language);
+      }else{
+        document.documentElement.lang=language;
+        update();
+      }
+    });
+  }
+  window.addEventListener('iveron-language-change',update);
+  update();
 })();
 </script>
 </body></html>
